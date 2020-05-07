@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 13px;
+            position: absolute;
+            top: 32px;
+            left: 10px;
+            display: block;
+            z-index: -1;
+        }
+        input{
+            background:transparent;
+            border:1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="http://www.taobao.com" method="get" id="myform">
+        <input type="text" name="user" value="请输入用户名" id="con"><span>*</span><br>
+        <input type="password" name="pwd" id="two"><span>*</span><br>
+        <div id="three">请输入密码</div>
+        <input type="reset" value="重置">
+        <input type="submit" value="提交">
+    </form>
+</body>
+<script>
+    // 在文本框中获得鼠标或失去鼠标时触发的事件
+    document.getElementById("con").onfocus = function () {
+        if (this.value === "请输入用户名") {
+            this.value = "";
+        }
+    }
+    document.getElementById("con").onblur = function () {
+        if (this.value === "") {
+            this.value = "请输入用户名";
+            this.nextSibling.innerHTML = "*";
+        }
+    }
+    var n = document.getElementById("three").innerHTML;
+
+    document.getElementById("two").onfocus = function () {
+        if (n === "请输入密码") {
+            document.getElementById("three").style.display = "none";
+        }
+
+    }
+    document.getElementById("two").onblur = function () {
+        if (this.value === "") {
+            document.getElementById("three").style.display = "block";
+            this.nextSibling.innerHTML = "*";
+        }
+    }
+//    当文本框里的内容发生改变并失去焦点时触发的事件
+    document.getElementById("con").onchange = function () {
+        var s = document.getElementById("con").value.length;
+        if (s < 6) {
+            this.nextSibling.innerHTML = "用户名不能少于6位";
+        } else {
+            this.nextSibling.innerHTML = "用户名可用";
+        }
+        if(this.value==="请输入用户名"){
+            this.nextSibling.innerHTML = "用户名已被占用";
+        }
+    }
+    document.getElementById("two").onchange = function () {
+        var t = document.getElementById("two").value.length;
+        if (t < 6) {
+            this.nextSibling.innerHTML = "密码不能少于6位";
+        } else {
+            this.nextSibling.innerHTML = "密码可用";
+        }
+    }
+    // 当点击提交时触发的事件
+    document.getElementById("myform").onsubmit = function () {
+        var s = document.getElementById("con").value.length;
+        var t = document.getElementById("two").value.length;
+       
+        if(document.getElementById("con").value==="请输入用户名" || document.getElementById("two").value === ""){
+            alert("用户名或密码不能为空");
+            return false;
+        }
+        else if (s < 6 || t < 6) {
+            alert("用户名或密码不能少于6位");
+            return false;
+        }
+        else{
+            alert("正在提交");
+        }
+    }
+    // 当点击重置时触发的事件
+    document.getElementById("myform").onreset = function () {
+        document.getElementById("con").value = "请输入用户名";
+        document.getElementById("three").style.display = "block";
+        document.getElementById("con").nextSibling.innerHTML = "*";
+        document.getElementById("two").nextSibling.innerHTML = "*";
+    }
+
+</script>
+
+</html>

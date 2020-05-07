@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+</body>
+<script src="fd.js"></script>
+<script>
+    //高阶函数
+    //函数防抖  debounce    过一段时间再去运行这个函数
+    //应用场景  窗体事件、滚动条,搜索框
+
+    // var func = function (width) {
+    //     console.log(width)
+    // }.bind(window)
+
+    // var handle = myPlugin.debounce(func, 1000)
+    // window.onresize = function () {
+    //     handle(document.documentElement.clientWidth);
+    // }
+
+
+    // 例子
+    // 文本框停止输入1秒后输出
+    var inp = document.querySelector("input");
+    var handle = myPlugin.debounce(function (val,inp) {
+        console.log("搜索" + val);
+        console.log(inp)
+    }, 1000) 
+
+    inp.oninput = function(){
+        handle(this.value,this)
+    }
+</script>
+
+</html>

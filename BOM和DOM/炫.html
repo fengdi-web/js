@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #000;
+            height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="tab"></table>
+</body>
+<script>
+    // var clr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+    // var tab = document.getElementById("tab");
+    // function test() {
+    //     document.getElementById("tab").innerHTML = "";
+    //     for (var i = 0; i < 15; i++) {
+    //         var r = document.createElement("tr");
+    //         tab.appendChild(r);
+    //         for (var j = 0; j < 15; j++) {
+    //             var cc = "#";
+    //             for (var z = 0; z < 6; z++) {
+    //                 var n = Math.floor(Math.random() * 16);
+    //                 cc += clr[n];
+    //             }
+    //             var d = document.createElement("td");
+    //             d.style.background = cc;
+    //             tab.children[i].appendChild(d);
+    //         }
+    //     }
+    // }
+
+    //     setInterval("test()",300);
+
+
+
+
+
+    var clr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+    var tab = document.getElementById("tab");
+    for (var i = 0; i < 15; i++) {
+        var r = document.createElement("tr");
+        tab.appendChild(r);
+        for (var j = 0; j < 15; j++) {
+            var cc = "#";
+            for (var z = 0; z < 6; z++) {
+                var n = Math.floor(Math.random() * 16);
+                cc += clr[n];
+            }
+            var d = document.createElement("td");
+            d.style.background = cc;
+            tab.children[i].appendChild(d);
+        }
+    }
+    function changeColor(ccc) {
+        var dd = document.getElementsByTagName("td");
+        for (var i = 0; i < dd.length; i++) {
+            if (ccc) {
+                dd[i].style.background = ccc;
+            } else {
+                var cc = "#";
+                for (var z = 0; z < 6; z++) {
+                    var n = Math.floor(Math.random() * 16);
+                    cc += clr[n];
+                }
+                dd[i].style.background = cc;
+            }
+        }
+    }
+    var b;
+    function start() {
+        clearTnterval(b);
+        b = setInterterval("changeColor()", 1000);
+    }
+    tab.onclick = function (e) {
+        var that = e.target
+        if (that.nodeName === "TD") {
+            var ys = that.style.background;
+            clearInterval(b);
+            changeColor(ys);
+        }
+    }
+
+</script>
+
+</html>

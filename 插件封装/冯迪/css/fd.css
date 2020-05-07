@@ -1,0 +1,162 @@
+/* 二级导航 */
+#one{
+    position: absolute;
+    top:0;
+    left:0;
+}
+#one>li {
+    float: left;
+}
+
+#one>li>h1 {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #fff;
+    background: #fc2;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    color: #f00;
+    cursor: pointer;
+}
+
+#one>li>ul {
+    display: none;
+    /* overflow: hidden; */
+}
+
+#one>li>ul>li {
+    width: 300px;
+    height: 50px;
+    background: lightcyan;
+    border: 1px solid #fff;
+}
+
+#one>li>ul>li>a {
+    color: limegreen;
+    display: block;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+}
+/* 侧导航 */
+.cdh{
+    position: absolute;;
+    top:300px;
+    left:0;
+  
+}
+.cdh h2 {
+    width: 100px;
+    height: 30px;
+    background: limegreen;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #fff;
+    /* float:left; */
+
+}
+
+.cdh ul {
+    display: none;
+    
+}
+
+.cdh li {
+    width: 100px;
+    height: 30px;
+    background: #f00;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #fff;
+   
+}
+
+/* 轮播图 */
+.show {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f00;
+    overflow: hidden;
+    position: relative;
+    top:500px;
+    left:0;
+
+}
+
+.content {
+    width: 1500px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+img {
+    width: 300px;
+    height: 200px;
+}
+
+/* 图片中心缩放 */
+.con {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    top: 600px;
+    left: 100px;
+    /* border: 1px solid #000; */
+}
+
+.child {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* tab标签页 */
+#tab{
+    margin-top:700px;
+
+}
+
+#tab li{
+    float:left;
+    width:100px;
+    height:30px;
+    border:1px solid #0f0;
+    text-align:center;
+    line-height:30px;
+    background:lightgreen;
+}
+
+#tab li a{
+    color:#f40;
+}
+
+#tabcont div{
+    clear:both;
+    width:300px;
+    height:200px;
+    border:1px solid lightslategrey;
+    display:none;
+}
+
+#tabcont img{
+    width:300px;
+    height:200px;
+    
+}
+
+#tabcont .showt{
+    display:block;
+
+}
+
+#tab .color{
+    background:lime;
+}

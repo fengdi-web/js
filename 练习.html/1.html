@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        #tab li {
+            float: left;
+            margin-right: 10px;
+            width: 150px;
+            height: 30px;
+            border: 1px solid lightblue;
+            background: lightsalmon;
+        }
+
+        #tab li a {
+            display: block;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 16px;
+            color: #ff9;
+        }
+
+        #tabcont div {
+            clear: both;
+            width: 300px;
+            height: 300px;
+            border:1px solid #00f;
+            display: none;
+        }
+
+        #tabcont .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tab">
+        <ul>
+            <li data-index="0"><a href="javascript:;">中国</a></li>
+            <li data-index="1"><a href="javascript:;">美国</a></li>
+            <li data-index="2"><a href="javascript:;">新西兰</a></li>
+        </ul>
+        <div id="tabcont">
+            <div class="show">中国</div>
+            <div>美国</div>
+            <div>新西兰</div>
+        </div>
+    </div>
+</body>
+<script>
+    var s = document.getElementsByTagName("li");
+    for (var i = 0; i < s.length; i++) {
+        s[i].onclick = function () {
+            var t = this.getAttribute("data-index");
+            var cont = document.getElementById("tabcont").children;
+            for (var j = 0; j < cont.length; j++) {
+                var f = cont[j].getAttribute("class");
+                if (f === "show") {
+                    cont[j].removeAttribute("class");
+                }
+            }
+            cont[t].className="show";
+        }
+    }
+</script>
+
+</html>

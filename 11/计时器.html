@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="str()">开始</button>
+    <button onclick="stp()">结束</button>
+    <div id="tim">00:00:00</div>
+</body>
+<script>
+    var s = 0,
+        m = 0,
+        h = 0;
+    var ss = "00",
+        mm = "00",
+        hh = "00";
+    var x = 0;
+
+    function test() {
+        s++;
+        if (s >= 60) {
+            m++;
+            s = 0;
+        }
+        if (m >= 60) {
+            h++;
+            m = 0;
+        }
+        s < 10 ? ss = "0" + s : ss = s;
+        m < 10 ? mm = "0" + m : mm = m;
+        h < 10 ? hh = "0" + h : hh = h;
+        document.getElementById("tim").innerHTML = hh + ":" + mm + ":" + ss;
+    }
+
+    function str() {
+        if (x) {
+            clearInterval(f);
+        }
+        f = setInterval("test()", 1000);
+        x = 1;
+    }
+
+    function stp() {
+        clearInterval(f);
+    }
+</script>
+
+</html>

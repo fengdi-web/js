@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="test('苹果')">苹果</button>
+    <button onclick="test('橙子')">橙子</button>
+    <button onclick="test('荔枝')">荔枝</button>
+    <button onclick="test('西瓜')">西瓜</button>
+    <button onclick="test('草莓')">草莓</button>
+    <div id="car"></div>
+</body>
+<script>
+    var fruit = [];
+    var sl = [];
+
+    function test(canshu) {
+        var f = fruit.indexOf(canshu);
+        if (f == -1) {
+            fruit.push(canshu);
+            sl.push(1);
+        } else {
+            sl[f] += 1;
+        }
+        add();
+    }
+
+    function add() {
+        document.getElementById("car").innerHTML = "";
+        for (var i in fruit) {
+            var content = "<p><span>" + fruit[i] + "</span><span>" + sl[i] + "</span></p>"
+            document.getElementById("car").innerHTML += content;
+        }
+    }
+
+
+    // function test(canshu) {
+    //     var f = fruit.indexOf(canshu);
+    //     if (f == -1) {
+    //         fruit.push(canshu);
+    //         sl.push(1);
+    //     } else {
+    //         sl[f] += 1;
+    //     }
+    //     document.getElementById("car").innerHTML = "";
+    //     for (var i in fruit) {
+    //         document.getElementById("car").innerHTML += "<p><span>" + fruit[i] + "</span><span>" + sl[i] + "</span></p>";
+    //     }
+    // }
+</script>
+
+</html>

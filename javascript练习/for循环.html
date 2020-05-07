@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    输出10个a
+//    var i = 1
+//    var count = 0
+//    for(; i ;){                      
+//        document.write("a");
+//        count++;
+//        if(count == 10){
+//            i = 0;
+//        }
+//    }
+
+
+//     i 条件   这个条件一直成立 由count来控制输出a的个数
+//         0    a
+//         1    a
+//         2    a
+//         3    a
+//         4    a
+//         5    a
+//         6    a
+//         7    a
+//         8    a
+//         9    a
+
+
+
+// 输出0-9的和
+    // var i = 1;
+//     var count = 0;
+// for(var i = 1; i < 10 ; i++){
+//     count += i;
+//     }document.write(count);
+
+
+
+
+//   打印100个数
+// 方法一
+//   var i = 0;
+//   for(; i < 100 ;){
+//       document.write(i);
+//       i++;
+//   }
+
+
+
+// 方法二
+//    var i = 100;
+//    for(; i-- ;){
+//        document.write(i)
+//    }
+
+
+
+//   100以内能同时被3 5 7整除的数
+//   for(var i = 0; i < 100; i++){
+//       if(i % 3 == 0 || i % 5 == 0 || i % 7 == 0){
+//           document.write(i);
+//       }
+//   }
+
+//   100以内能同时被3 5 7整除的数的和
+//     var count = 0;
+//   for(var i = 1; i < 100; i++){
+//       if(i % 3 == 0 || i % 5 == 0 || i % 7 == 0){
+//           document.write(i);
+//           count += i
+//       }
+//   }
+//     document.write(count);
+
+
+
+    //100以内输出7的倍数
+    // var i = 0;
+    // while(i < 100){
+    //     if(i % 7 == 0){
+    //         document.write(i);
+    //     }
+    //     i++;
+    // }
+
+
+
+
+    // for(var i = 0; i < 4; i++){
+    //     for(j = 0; j < i + 1; j++){
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+
+    // for(var i = 0; i < 4; i++){
+    //     for(j = 0; j < 4 - i; j++){
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+    //     var isFind = false;
+    // for(var i = 135; i <= 145; i++){
+    //     if(i % 26 ==0){
+    //         console.log(i);
+    //         isFind = true;
+    //         break;
+    //     }
+    // }
+    // if(!isFind){
+    //     console.log("不存在");
+    // }
+
+
+    // 第一题
+    // for(var i = 1; i <= 100 ;i++){
+    //     document.write("*");
+    // }
+
+
+    // 第二题
+
+    // var x =parseInt(window.prompt('input'));
+    // for(var i = 1; i <= x; i++){
+    //         document.write("*");
+    // }
+
+    // 第三题
+
+
+    // 方法一：
+    // var r = 3;
+    // var c = 5;
+    // for(var i = 0; i < r; i++){
+    //     for(var j = 0; j < c; j++){
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+    // 方法二：
+
+
+    // var r = 3,
+    //     c = 5;
+    // for(var i = 0; i < r; i++){
+    //     var str = " ";
+    //     for(var j = 0; j < c; j++){
+    //         str += "*";
+
+    //     }
+    //     console.log(str);
+    // }
+
+
+    // 第四题
+
+
+    // 方法一：
+
+    // for(var i = 0; i < 5; i++){
+    //     for(var j = 0; j < i + 1; j++){
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+    // 方法二
+
+    // var r = 5;
+    // for(var i = 1; i <= r; i++){
+    //     var str = " ";
+    //     for(var j = 0; j < i; j++){
+    //         str += "*";
+    //     }
+    //     console.log(str);
+    // }
+
+
+
+
+
+
+
+
+
+
+    // 第五题
+
+
+    // var r = 5;
+    // for (var i = 1; i <= r; i++) {
+    //     var str = "";
+    //     for (var j = 0; j < r - i; j++) {
+    //         str += " ";
+    //     }
+    //     for (var j = 0; j < 2 * i - 1; j++) {
+    //         str += "*";
+    //     }
+    //     console.log(str);
+    // }
+
+
+
+
+
+
+
+
+
+
+    // 第六题
+
+    // for(var i = 1; i <= 100; i++){
+    //     document.write(i);
+    // }
+
+
+
+
+
+    // 第七题
+
+    // for(var i = 1; i <= 100; i++){
+    //     if(i % 2 !== 0){
+    //         document.write(i);
+    //     }
+    // }
+
+
+    // 第八题
+    //   var num = 0;
+    //  for(var i = 1; i <= 100; i++){
+    //     num += i;
+    //  }
+    //  document.write(num);
+
+
+    // 第九题
+
+    // var num = 0;
+    // for(var i = 1; i <= 100; i++){
+    //     if(i % 2 !== 0){
+    //         num += i
+    //     }
+    // }
+    // document.write(num);
+
+
+    // 第十题
+
+    // var num = 1;
+    // for(var i = 1; i <= 10; i++){
+    //     num *= i
+    // }
+    // document.write(num);
+
+
+    // 第十一题
+
+    // var num = 233;
+    // var isFind = false;
+    // for(var i = 2; i <= num -1; i++){
+    //     if(num % i === 0){
+    //        isFind = true;
+    //        break;
+    //     }
+    // }
+    // if(isFind){
+    //     document.write("不是素数");
+    // }else{
+    //     document.write("是素数");
+    // }
+
+
+    // var num = 233;
+    // var recode = 0;
+    // for(var i = 1; i <= num; i++){
+    //     if(num % i ===0){
+    //         recode++
+    //     }
+    // }
+    // if(recode == 2){
+    //     document.write("是素数");
+    // }else{ 
+    //     document.write("不是素数");
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 第十二题-----
+
+    // for(var i = 1; i <= 100; i++){
+    //     var isFind = false;
+    //     for(var j = 2; j <= i - 1; j++){
+    //       if(i % j === 0){
+    //       isFind = true;
+    //       break;
+    //       }
+    //     }
+    //     if(i > 1 && !isFind){
+    //     document.write(i);
+    //    }
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 第十三题
+    // var sum = 0;
+    // for(var i = 2; i <= 100; i++){
+    //    var isFind = false;
+    //    for(var j = 2; j < i - 1;j++){
+    //        if(i % j ===0){
+    //         isFind = true;
+    //          break;
+    //        }
+    //    }
+    //    if(!isFind){
+    //     sum += i;
+    //    }
+    // }
+    // document.write(sum);
+
+
+
+
+
+
+    // `${j}*${i}=${i*j}\t`;
+
+
+    // 第十四题
+
+    // for(var i = 1; i <= 9; i++){
+    //     var str = "";
+    //     for(var j = 1; j <= i; j++){
+    //        str += `${j}*${i}=${i*j}\t`;
+    //     }
+    //     console.log(str);
+    // }
+
+
+
+    // for(var i = 1; i <= 9; i++){
+    //     for(var j = 1; j <= i; j++){
+    //         document.write(j+"*"+i+"="+i*j+" ");
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+
+
+
+
+     // for(var i = 0; i < 3; i++){          
+    //     for(var j = 0; j < 3; j++){
+    //         console.log(i,j);
+    //         if(i + j >= 2){
+    //             break;
+    //         }
+    //     }
+    // }
+
+    // 0     0
+    // 0     1
+    // 0     2
+    // 1     0
+    // 1     1
+    // 2     0
+
+    // 打印出0、1、2、没有问题，打印到3时，会进入死循环
+    // var i = 0;
+    // while(i < 10){
+    //     console.log(i);
+    //     if(i === 3){
+    //         continue;
+    //     }
+    //     i++;
+    // }
+
+
+    // 打印结果没有3
+    // var i = 0;
+    // while(i < 10){
+    //     if(i === 3){
+    //         i++;
+    //         continue;
+    //     }
+    //     console.log(i);
+    //     i++;
+    // }
+ 
+    </script>
+</body>
+
+</html>

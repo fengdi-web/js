@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 更改对象为当前节点的父节点  parentNode -->
+    <!-- <div>
+        <div>
+            <p id="one">你好</p>
+        </div>
+        <div>
+            <ul>
+                <li>1</li>
+                <li id="two">2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div> -->
+
+
+
+
+
+    <!-- 更改为当前对象的第一个子节点（前面不能有空格，否则获得的是文本节点）  firstChild -->
+    <!-- 更改为当前对象的最后一个子节点（后面不能有空格，否则获得的是文本节点）   lastChild -->
+    <!-- <ul id="two"><li>1</li>
+        <li>2</li>
+        <li>3</li></ul> -->
+
+
+
+
+
+
+
+    <!-- 以集合的方式更改为子节点 -- childNodes 更改为子节点的集合 （下标从0开始） -->
+    <!-- <ul id="one"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li></ul> -->
+
+
+    <!-- 以集合的方式更改为子节点 -- children 更改为子元素的集合 （下标从0开始） -->
+    <!-- <ul id="one">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul> -->
+
+
+
+
+
+    <!-- 更改为兄弟节点--nextSibling /previousSibling更改为下/上一个兄弟（不能有空格） -->
+    <!-- <ul>
+        <li>1</li><li id="one">2</li><li>3</li>
+    </ul> -->
+
+    <!-- nextElementSibling（下）  /  previousElementSibling （上） -->
+    <!-- <ul>
+        <li>1</li>
+        <li id="one">2</li>
+        <li>3</li>
+    </ul> -->
+
+
+
+    <!-- 链式操作 -->
+    <!-- <div>
+        <p id="one">你好</p>
+    </div>
+    <div>
+        <h1>hi</h1>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+</body>
+<script>
+    // 更改对象为当前节点的父节点  parentNode
+    // var one = document.getElementById("one");
+    // one.style.background="#f40";
+    // one.parentNode.style.border="1px solid #0f0";
+
+
+
+
+    // 更改为当前对象的第一个子节点（前面不能有空格，否则获得的是文本节点）  firstChild
+    // var two = document.getElementById("two");
+    // two.firstChild.style.background="#f40";
+
+
+    // 更改为当前对象的最后一个子节点（后面不能有空格，否则获得的是文本节点）   lastChild
+    // var two = document.getElementById("two");
+    // two.lastChild.style.background="#f40";
+
+
+    // 以集合的方式更改为子节点 -- childNodes 更改为子节点的集合 （下标从0开始）
+    // var one = document.getElementById("one");
+    // var s = one.childNodes;
+    // alert(s.length);
+    // s[0].style.background="#fcc";
+
+
+    // var one = document.getElementById("one");
+    // var s = one.childNodes;
+    // for(var i = 0; i < s.length; i++){
+    //     s[i].style.background="#f40";
+    // }
+
+    // 隔行变色
+    // var one = document.getElementById("one");
+    // var s = one.childNodes;
+    // for (var i = 0; i < s.length; i++) {
+    //     if(i % 2 === 0){
+    //         s[i].style.background="#fcc";
+    //     }
+    // }
+
+
+
+
+    // 以集合的方式更改为子节点 -- children 更改为子元素的集合 （下标从0开始）
+    // var one = document.getElementById("one");
+    // var s = one.children;
+    // alert(s.length);
+    // for (var i = 0; i < s.length; i++) {
+    //     if (i % 2 === 0){
+    //         s[i].style.background="#0f0";
+    //     }
+    // }
+
+
+
+    // 更改为兄弟节点--nextSibling 更改为下一个兄弟（不能有空格）
+    // var one = document.getElementById("one");
+    // var s = one.nextSibling;
+    // s.style.background="#ccc";
+
+
+    // 更改为兄弟节点--previousSibling 更改为上一个兄弟（不能有空格）
+    // var one = document.getElementById("one");
+    // var s = one.previousSibling;
+    // s.style.background="#ccc";
+
+
+
+    // 更改为兄弟节点--nextElementSibling 更改为下一个兄弟（有兼容性IE8不支持）
+    // var one = document.getElementById("one");
+    // var s = one.nextElementSibling;
+    // s.style.background="#ccc";
+
+
+    // 更改为兄弟节点--previousElementSibling 更改为上一个兄弟（有兼容性IE8不支持）
+    // var one = document.getElementById("one");
+    // var s = one.previousElementSibling;
+    // s.style.background="#ccc";
+
+
+
+    // 链式操作
+    // document.getElementById("one").parentNode.nextElementSibling.children[0].style.background="#fc0";
+
+
+</script>
+
+</html>

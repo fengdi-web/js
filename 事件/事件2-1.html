@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* #con {
+            background: #fc0;
+            position: absolute;
+        }
+
+        .les {
+            width: 200px;
+            height: 200px;
+            top: 300px;
+            left: 400px;
+        }
+
+        .big {
+            width: 400px;
+            height: 400px;
+            top: 200px;
+            left: 300px;
+        } */
+
+
+        /* #con {
+            width: 400px;
+            height: 300px;
+            position: relative;
+        }
+
+        #con img {
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        #con .zzc {
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+        } */
+
+
+
+        #con {
+            width: 400px;
+            height: 300px;
+            border:1px solid #fc0;
+        }
+    </style>
+    <script>
+        // 点击事件
+        // window.onload=function (){
+        //     document.getElementById("con").onclick=function(){
+        //         this.innerHTML="我点击了这个div"
+        //     }
+        // }
+
+
+        // 鼠标按下、鼠标抬起
+        // window.onload = function () {
+        //     document.getElementById("con").onmousedown = function () {
+        //         this.innerHTML = "我点击了这个div"
+        //     }
+        //     document.getElementById("con").onmouseup = function () {
+        //         this.innerHTML += "鼠标抬起"
+        //     }
+        // }
+
+
+        // 获得鼠标、失去鼠标（鼠标划入、划出）
+        // window.onload = function (){
+        //     document.getElementById("con").onmouseover=function(){
+        //         this.className="big";
+        //     }
+        //     document.getElementById("con").onmouseout=function(){
+        //         this.className="les";
+        //     }
+        // }
+    </script>
+</head>
+
+<body>
+    <!-- <div id="con" class="les"></div> -->
+
+    <!-- <div id="con">
+        <img src="img/1.jpg">
+        <div class="zzc"></div>
+    </div> -->
+
+
+    <!-- <div id="con"></div> -->
+
+    <!-- <textarea id="con"></textarea>  -->
+</body>
+<script>
+    // 遮罩层
+    // document.getElementById("con").onmouseover=function(){
+    //     this.children[1].style.display="block";
+    // }
+    // document.getElementById("con").onmouseout=function(){
+    //     this.children[1].style.display="none";
+    // }
+
+
+    // 当件鼠标移动时发生的事件
+    // document.getElementById("con").onmousemove=function(){
+    //     this.innerHTML+= 1;
+    // }
+
+
+
+
+    // 当键盘抬起时触发的事件
+    // document.getElementById("con").onkeyup=function(){
+    //     var s = this.value;
+    //     console.log(s);
+    // }
+
+
+    // document.getElementById("con").onkeyup=function(){
+    //     var s = this.value.length;
+    //     console.log(s);
+    // }
+
+</script>
+
+</html>

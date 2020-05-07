@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/z.jpg" alt="" id="im">
+</body>
+<script>
+    // 固定值图片缩放效果
+    // document.getElementById("im").onmouseover = function () {
+    //     var w = 200;
+    //     var h = 200;
+    //     var t = 200;
+    //     var l = 200;
+    //     var that = this;
+    //     var i = setInterval(function () {
+    //         w += 10;
+    //         h += 10;
+    //         t -= 5;
+    //         l -= 5;
+    //         that.style.width = w + "px";
+    //         that.style.height = h + "px";
+    //         that.style.top = t + "px";
+    //         that.style.left = l + "px";
+    //         if (w === 300) {
+    //             clearInterval(i);
+    //         }
+    //     }, 50)
+    // }
+
+    // document.getElementById("im").onmouseout = function () {
+    //     var w = 300;
+    //     var h = 300;
+    //     var t = 150;
+    //     var l = 150;
+    //     var that = this;
+    //     var i = setInterval(function () {
+    //         w -= 10;
+    //         h -= 10;
+    //         t += 5;
+    //         l += 5;
+    //         that.style.width = w + "px";
+    //         that.style.height = h + "px";
+    //         that.style.top = t + "px";
+    //         that.style.left = l + "px";
+    //         if (w === 200) {
+    //             clearInterval(i);
+    //         }
+    //     }, 30)
+    // }
+
+
+
+    // 方法一
+    // function sf(w, h, t, l, stop) {
+    //     var ww = w;
+    //     document.getElementById("im").onmouseover = function () {
+    //         var that = this;
+    //         var i = setInterval(function () {
+    //             w += 10;
+    //             h += 10;
+    //             t -= 5;
+    //             l -= 5;
+    //             that.style.width = w + "px";
+    //             that.style.height = h + "px";
+    //             that.style.top = t + "px";
+    //             that.style.left = l + "px";
+    //             if (w === stop) {
+    //                 clearInterval(i);
+    //             }
+    //         }, 50)
+    //     }
+
+    //     document.getElementById("im").onmouseout = function () {
+    //         var that = this;
+    //         var i = setInterval(function () {
+    //             w -= 10;
+    //             h -= 10;
+    //             t += 5;
+    //             l += 5;
+    //             that.style.width = w + "px";
+    //             that.style.height = h + "px";
+    //             that.style.top = t + "px";
+    //             that.style.left = l + "px";
+    //             if (w === ww) {
+    //                 clearInterval(i);
+    //             }
+    //         }, 50)
+    //     }
+    // }
+    // sf(200,200,200,200,300);
+
+    // 方法二
+    // function sf(w, h, t, l, stop) {
+    //     var yw=w;
+    //     document.getElementById("im").onmouseover = function () {
+    //         sf(w, h, t, l, stop);
+    //         var that = this;
+    //         var i = setInterval(function () {
+    //             w += 10;
+    //             h += 10;
+    //             t -= 5;
+    //             l -= 5;
+    //             that.style.width = w + "px";
+    //             that.style.height = h + "px";
+    //             that.style.top = t + "px";
+    //             that.style.left = l + "px";
+    //             if (w === stop) {
+    //                 clearInterval(i);
+    //             }
+    //         }, 50)
+    //     }
+
+    //     document.getElementById("im").onmouseout = function () {
+    //            var sw = parseInt(this.style.width);
+    //            var sh = parseInt(this.style.height);
+    //            var st = parseInt(this.style.top);
+    //            var sl = parseInt(this.style.left);
+    //             var that = this;
+    //             var i = setInterval(function () {
+    //                 sw -= 10;
+    //                 sh -= 10;
+    //                 st += 5;
+    //                 sl += 5;
+    //                 that.style.width = sw + "px";
+    //                 that.style.height = sh + "px";
+    //                 that.style.top = st + "px";
+    //                 that.style.left = sl + "px";
+    //                 if (sw === yw) {
+    //                     clearInterval(i);
+    //                 }
+    //             }, 30)
+    //     }
+    // }
+    // sf(200, 200, 200, 200, 300);
+
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./mock.js"></script>
+    <script src="./mock1.js"></script>
+</head>
+<body>
+    <div id="con"></div>
+</body>
+<script>
+    var xmlhttp=new XMLHttpRequest();
+    var post_data="username=徐晚乐&userpwd=123456&userclass=56&type=4";
+    xmlhttp.open("post","http://www.qhdlink-student.top/student/login.php");
+    xmlhttp.setRequestHeader("content-type","application/x-www-form-urlencoded");
+    xmlhttp.onreadystatechange=function(){
+         if(xmlhttp.readyState==4 && xmlhttp.status==200){
+            var data=xmlhttp.responseText;
+        //   console.log(data)
+        document.getElementById("con").innerHTML=data
+         }
+    }
+    xmlhttp.send(post_data);
+</script>
+</html>

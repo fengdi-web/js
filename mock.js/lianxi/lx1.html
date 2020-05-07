@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body> 
+<script src="https://cdn.bootcss.com/Mock.js/1.0.1-beta3/mock-min.js"></script>
+<script>
+    //mock 作用：生成随机数据,拦截ajax请求
+    //模拟数据基本语法
+    var data = Mock.mock({
+        "userlist|20":[
+            {
+                'id':'@id',
+                'name':'@name',
+                'age':'@integer(20,30)',
+                'email':'@email',
+                'birthday':'@date',
+                'city':'@city(true)',
+                'gender':'@integer(0,1)',
+                'married':'@boolean',
+                'faceimg':'@image(100x100,#0f0,SKII)'
+            }
+        ]
+    })
+
+    console.table(data.userlist[0]);
+</script>
+</html>

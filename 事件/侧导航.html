@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /* #one>li {
+            float: left ;
+        } */
+        #one>li>a {
+            display: block;
+            width:300px;
+            height: 50px;
+            border: 1px solid #fff;
+            background: #fc2;
+            font-size: 24px;
+            line-height: 50px;
+            text-align: center;
+            color:#f00;
+        }
+        #one>li>ul{
+            display:none;
+            position:absolute;
+            left:300px;
+            top:0;
+        }
+        #one>li>ul>li{
+            width:300px;
+            height:50px;
+            background:lightcyan;
+            border:1px solid #fff;
+        }
+        #one>li>ul>li>a{
+            color:limegreen;
+            display:block;
+            height:50px;
+            font-size:16px;
+            line-height:50px;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="one">
+        <li><a href="#">汤姆福特</a>
+            <ul>
+                <li><a href="http://www.taobao.com">口红16</a></li>
+                <li><a href="">唇釉01</a></li>
+                <li><a href="">落樱甜情</a></li>
+                <li><a href="">深茉幽红</a></li>
+                <li><a href="">绝耀倾城</a></li>
+            </ul>
+        </li>
+        <li><a href="#">纪梵希</a>
+            <ul>
+                <li><a href="">心无禁忌</a></li>
+                <li><a href="">灿若晨曦</a></li>
+                <li><a href="">306</a></li>
+                <li><a href="">小铃铛</a></li>
+                <li><a href="">禁忌之吻</a></li>
+            </ul>
+        </li>
+        <li><a href="#">圣罗兰</a>
+            <ul>
+                <li><a href="">反转巴黎</a></li>
+                <li><a href="">黑色奥飘茗</a></li>
+                <li><a href="">N9</a></li>
+                <li><a href="">N8</a></li>
+                <li><a href="">N202</a></li>
+            </ul>
+        </li>
+        <li><a href="#">兰蔻</a>
+            <ul>
+                <li><a href="">132</a></li>
+                <li><a href="">134</a></li>
+                <li><a href="">美丽人生</a></li>
+                <li><a href="">天鹅颈</a></li>
+                <li><a href="">奇迹绽放</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script>
+    var son = document.getElementById("one").children;
+    for(var i = 0; i < son.length; i++){
+        son[i].onmouseover=function(){
+            this.children[1].style.display="block";
+        }
+        son[i].onmouseout=function(){
+            this.children[1].style.display="none";
+        }
+    }
+</script>
+
+</html>

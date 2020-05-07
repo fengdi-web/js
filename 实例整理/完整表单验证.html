@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="http://www.taobao.com" method="get" name="myform">
+        <p>用户名:<input type="text" name="username" id="username"><span>*</span></p>
+        <p>密码:<input type="password" name="pwd" id="pwd"><span>*</span></p>
+        <p>确认密码:<input type="password" name="repwd" id="repwd"><span>*</span></p>
+        <p>手机号:<input type="text" name="tel" id="tel"><span>*</span></p>
+        <p>邮箱:<input type="text" name="email" id="email"><span>*</span></p>
+        <p><input type="submit" value="注册"></p>
+    </form>
+</body>
+<script>
+    function stopsubmit(that) {
+        that.preventDefault();
+    }
+    var username = document.getElementById("username");
+    var pwd = document.getElementById("pwd");
+    var repwd = document.getElementById("repwd");
+    var tel = document.getElementById("tel");
+    var email = document.getElementById("email");
+    username.onchange = function () {
+        if (this.value === "用户名") {
+            this.nextSibling.innerHTML = "用户名已被占用";
+        } else {
+            this.nextSibling.innerHTML = "用户名可用";
+        }
+    }
+    pwd.onchange = function () {
+        if (this.value.length < 6) {
+            this.nextSibling.innerHTML = "密码不能少于6个字符";
+        } else {
+            this.nextSibling.innerHTML = "密码可用";
+        }
+    }
+    repwd.onchange = function () {
+        if (this.value === document.getElementById("pwd").value) {
+            this.nextSibling.innerHTML = "密码一致";
+        } else {
+            this.nextSibling.innerHTML = "密码不一致";
+        }
+    }
+    tel.onchange = function () {
+        var nbr = /^(13|15|16|17|18)\d{9}$/;
+        if (nbr.test(this.value)) {
+            this.nextSibling.innerHTML = "手机号码格式正确";
+        } else {
+            this.nextSibling.innerHTML = "手机号码格式不正确";
+        }
+    }
+    email.onchange = function () {
+        var mal = /^\w+@\w+\.\w{2,3}$/;
+        if (mal.test(this.value)) {
+            this.nextSibling.innerHTML = "邮箱格式正确";
+        } else {
+            this.nextSibling.innerHTML = "邮箱格式不正确";
+        }
+    }
+   
+    document.getElementById("myform").onsubmit = function (e) {
+        var xnm = username.nextSibling.innerHTML;
+        var xpwd = pwd.nextSibling.innerHTML;
+        var xrepwd = repwd.nextSibling.innerHTML;
+        var xtel = tel.nextSibling.innerHTML;
+        var xemail = email.nextSibling.innerHTML;
+        if (username.value == "") {
+            username.nextSibling.innerHTML = "请输入用户名"
+            stopsubmit(e);
+        }
+        if (pwd.value == "") {
+            pwd.nextSibling.innerHTML = "请输入密码"
+            stopsubmit(e);
+        }
+        if (repwd.value == "") {
+            repwd.nextSibling.innerHTML = "请输入密码"
+            stopsubmit(e);
+        }
+        if (tel.value == "") {
+            tel.nextSibling.innerHTML = "请输入手机号"
+            stopsubmit(e);
+        }
+        if (email.value == "") {
+            email.nextSibling.innerHTML = "请输入邮箱"
+            stopsubmit(e);
+        }
+        if (xnm !== "用户名可用" || xpwd !== "密码可用" || xrepwd !== "密码一致" || xtel !== "手机号码格式正确" || xemail !== "邮箱格式正确") {
+            stopsubmit(e);
+        }
+    }
+
+</script>
+
+</html>

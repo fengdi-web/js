@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="" name="myform">
+        <input type="text" name="nu1" value="0">
+        <select name="fuhao" id="">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <input type="text" name="nu2" value="0">
+        <button type="button" onclick="test()">=</button>
+        <input type="text" name="he" value="0">
+    </form>
+</body>
+<script>
+    function test() {
+        var a = document.myform.nu1.value;
+        var b = document.myform.nu2.value;
+        var find = document.myform.fuhao.value;
+        var s = 0;
+        switch (find) {
+            case "1": s = parseFloat(a) + parseFloat(b); break;
+            case "2": s = parseFloat(a) - parseFloat(b); break;
+            case "3": s = parseFloat(a) * parseFloat(b); break;
+            case "4": s = parseFloat(a) / parseFloat(b); break;
+        }
+        document.myform.he.value = s;
+    }
+</script>
+
+</html>

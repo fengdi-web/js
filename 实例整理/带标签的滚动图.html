@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #banner{
+      position: relative;
+      width:400px;
+      height:300px;
+    }
+    #show{
+      width:400px;
+      height:300px;
+      border:2px solid #f00;
+      overflow:hidden;
+      
+    }
+    #con{
+      width:1600px;
+      height:300px;
+    }
+    img{
+      width:400px;
+      height:300px;
+    }
+    #btn{
+      list-style-type:none;
+      margin:0;
+      padding:0;
+      position:absolute;
+      left:150px;
+      top:270px;
+    }
+    #btn li{
+      float:left;
+      width:15px;
+      height:15px;
+      font-size:12px;
+      text-align:center;
+      background:#fff;
+      border-radius:50%;
+      margin-left:5px;
+      cursor: pointer;
+    }
+    #btn .bg{
+      background:#000;
+      color:#fff;
+    }
+  </style>
+</head>
+<body>
+<div id="banner">
+  <div id="show">
+    <div id="con"><img src="img/1.jpg" name="0"><img src="img/2.jpg" name="1"><img src="img/3.jpg" name="2"><img src="img/4.jpg" name="3"></div>
+    <ul id="btn">
+      <li class="bg">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </div>
+</div>
+</body>
+<script>
+  var si,sto;
+  var f=1; //定义标签的初始值为1,(默认开始就是第一张图片)
+  var bb=document.getElementById("btn").children;
+  function ss(){
+    if(f>=4){ //如果现在第四个按钮上有颜色样式，就去掉该样式
+        bb[f-1].removeAttribute("class");
+        f=0;
+      }
+    bb[f].className="bg";//给当前图片对应的标签加样式
+    if(f>=1){ //只有到了第二张图片开始，去掉前一张图片标签上的样式
+        bb[f-1].removeAttribute("class");
+     }
+    document.getElementById("show").scrollLeft+=40;
+    if(document.getElementById("show").scrollLeft>=400){
+      
+      var sh=document.getElementById("con");
+      sh.appendChild(sh.firstChild);
+      document.getElementById("show").scrollLeft=0;
+      clearInterval(si);
+      so();       
+      f++; //标签的标识符加一
+      
+    }
+  }
+  function so(){
+    sto=setTimeout("st()",2000);
+  }
+  function st(){
+    si=setInterval("ss()",100)
+    console.log(si);
+  }
+  so()
+  //点击焦点按钮切换图片
+  var btn=document.getElementById("btn").children;
+  for(var i=0;i<btn.length;i++){
+    btn[i].index=i;
+    btn[i].onclick=function(){
+      clearInterval(si);
+      clearTimeout(sto);
+      var mm=document.getElementById("con").children;
+      var sl=document.getElementById("show").scrollLeft;
+      if(sl<400 && sl>0){ //一张图片还没有走完时，切换图片处理按钮的背景
+      	btn[mm[1].getAttribute("name")].removeAttribute("class");
+      }else{
+      	btn[mm[0].getAttribute("name")].removeAttribute("class");
+      }
+      f=this.index;
+      btn[f].className="bg"; //给当前点击的按钮添加背景色
+      for(var j=0;j<mm.length;j++){
+        var ii=mm[j].getAttribute("name");
+        if(ii==this.index){ //判断当前点击的按钮对应的图片在第几张
+            var sh=document.getElementById("con");
+            for(var x=0;x<j;x++){  //将点击按钮对应的图片的前的所有图片都移动到末尾去
+               sh.appendChild(sh.children[0]);	
+               document.getElementById("show").scrollLeft=0;
+            }
+          break;
+        }
+      }
+      f++;
+      so();
+    }
+  }
+</script>
+</html>

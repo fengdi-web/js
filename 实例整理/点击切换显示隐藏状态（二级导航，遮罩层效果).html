@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        #con>li {
+            float: left;
+            height: 50px;
+            width: 200px;
+            border: 1px solid #fff;
+            background: lightgreen;
+        }
+
+        #con>li>a {
+            display: block;
+            height: 50px;
+            width: 200px;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        #con>li>ul {
+            display: none;
+        }
+
+        #con>li>ul>li {
+            height: 30px;
+            width: 200px;
+            border: 1px solid lavender;
+        }
+
+        #con>li>ul>li>a {
+            display: block;
+            height: 30px;
+            font-size: 15px;
+            color: lightsalmon;
+            background: seagreen;
+            line-height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="con">
+        <li><a href="#">one</a>
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">two</a>
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">three</a>
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">four</a>
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script>
+    // var s= document.getElementById("con").children;
+    // for(var i = 0; i < s.length; i++){
+    //     s[i].onmouseover=function(){
+    //         this.children[1].style.display="block";
+    //     }
+    //     s[i].onmouseout=function(){
+    //         this.children[1].style.display="none";
+    //     }
+    // }
+
+
+
+
+</script>
+
+</html>

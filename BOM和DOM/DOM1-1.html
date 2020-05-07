@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="one">秦皇岛</div> -->
+    <!-- 
+    <div name="one">苹果</div>
+    <div name="one">橙子</div>
+    <div name="one">葡萄</div> -->
+
+    <!-- <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>  -->
+
+    <!-- <p class="two">段落</p> -->
+    <!-- <button onclick="pu()">添加按钮</button>
+    <div id="two">
+        <h1>你好hi</h1>
+    </div> -->
+
+
+    <!-- <p id="two">段落</p> -->
+
+
+
+
+</body>
+<script>
+
+    // 1、通过ID获取文档节点
+    // var s = document.getElementById("one");
+    // alert(s);
+    // s.style.background="#0f0";
+
+    //弹出 [object HTMLDivElement]
+
+
+    // 2、通过name属性获取文档节点集合（数组）
+    // var t = document.getElementsByName("one");
+    // alert(t);
+    // for(var i = 0; i < t.length; i++){
+    //     t[i].style.background="#f00";
+    // }
+
+    // 弹出[object NodeList]
+
+
+    // 3、通过TagName标记名称获取文档节点集合（数组）
+    //  var t = document.getElementsByTagName("li");
+    //  alert(t);
+    //  弹出[object HTMLCollection]
+    //  for(var i = 0; i < t.length; i++){
+    //      if(i % 2 === 0){
+    //       t[i].style.background="#fcc";
+    //      }
+    //  }
+    // t[0].style.background="#ff0";
+
+    // 4、通过ClassName标记名称获取文档节点集合（数组）（IE8及以下不支持）
+    // var m = document.getElementsByClassName("two");
+    // alert(m);
+    // 弹出[object HTMLCollection]
+    // m[0].style.background="#0f0";
+    // alert(m[0].innerHTML);
+
+
+
+    // 不写等号获取值，写等号赋值
+
+    // var m = document.getElementById("two");
+    // alert(m.innerText);
+    // m.innerText = "<h1>你好hi<h1>";
+    // m.innerHTML = "<h1>你好hi<h1>";
+
+
+    //     var m = document.getElementById("two");
+    // alert(m.innerText);
+    // var m = document.getElementById("two");
+    // alert(m.innerHTML);
+
+    // innerText在获取时只能获取里面的文本
+    // innerHTML 在获取时获取里面的所有内容，包括HTML标记
+
+
+    // Document 对象节点信息
+    // 元素节点的nodename是标签的名称，得到的标签是大写的
+    // var m = document.getElementById("two");
+    // alert(m.nodeType);
+    // 弹出的是1，代表元素节点
+    // alert(m.nodeName);
+    // 弹出P
+
+
+
+
+
+
+
+    // Document对象操纵节点
+    // function pu() {
+    //     var h = document.createElement("h2");
+    //     h.innerHTML = "创建的新节点";
+    //     document.getElementById("two").appendChild(h);
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

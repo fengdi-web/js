@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* #one {
+            width: 200px;
+            height: 200px;
+        } */
+
+
+        #one {
+            width: 200px;
+            height: 200px;
+            background: #fc0;
+        }
+
+        .one {
+            border: 10px solid #fcc;
+        }
+
+        .two {
+            border: 1px solid #f40;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button onclick="test()">按钮</button>
+    <div id="one" class="one">勿忘初心</div>
+</body>
+<script>
+    // 样式设置--style.cssText属性
+    // document.getElementById("one").style.border="10px solid #0f0";
+    // document.getElementById("one").style.fontSize="50px";   //使用小驼峰命名法（国际标准命名法）
+
+
+    // var s = document.getElementById("one");
+    // var i = 1;
+    // function test() {
+    //     if (i === 1) {
+    //         s.style.display = "none";
+    //         i = 0;
+    //     } else {
+    //         s.style.display = "block";
+    //         i = 1;
+    //     }
+    // }
+
+
+    // 样式设置--className属性
+    function test() {
+        var s = document.getElementById("one").className;
+        // alert(s);
+        if (s === "one") {
+            document.getElementById("one").className = "two";
+        } else {
+            document.getElementById("one").className = "one";
+        }
+    }
+
+
+
+</script>
+
+</html>

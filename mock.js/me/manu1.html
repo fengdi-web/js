@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        table {
+            border: 1px solid lightslategrey;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 160px;
+            text-align: center;
+            border: 1px solid lightseagreen;
+        }
+
+        img {
+            width: 160px;
+            height: 160px;
+        }
+
+        .dh {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            display: -webkit-flex;
+            text-align: center;
+        }
+
+        .dh div {
+            flex: 1 1 0%;
+            line-height: 50px;
+            color: rgb(24, 16, 13);
+        }
+
+        .left {
+            background: lightseagreen;
+        }
+
+        .center {
+            background: lightgreen;
+        }
+
+        .right {
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="dh">
+        <div class="left"><a href="link-index.html">首页</a></div>
+        <div class="center"><a href="link-sz.html">师资力量</a></div>
+        <div class="right"><a href="link-cd.html">菜单</a></div>
+    </div> -->
+    <table id="tb" style="margin:0 auto"></table>
+</body>
+<!-- <script src="https://cdn.bootcss.com/Mock.js/1.0.1-beta3/mock-min.js"></script> -->
+<script src="mock.js"></script>
+<script src="manu.js"></script>
+<script>
+    var xmlHttp;
+    if (window.XMLHttpRequest) {
+        xmlHttp = new XMLHttpRequest();
+    } else {
+        xmlHttp = new ActiveXObject("Microsoft.XMLHttp");
+    }
+    var post_data = "username=冯迪&userpwd=123456&userclass=56&type=4";
+    xmlHttp.open("post", "/manulist");
+    xmlHttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            var data = xmlHttp.responseText;
+            var change = JSON.parse(data);
+            console.log(change)
+            for (var i in change) {
+                for (var j in change[i]) {
+                    var hh = "<tr><td>" + change[i][j].id + "</td><td>" + change[i][j].name + "</td><td>" + change[i][j].time + "</td><td>" + change[i][j].endtime + "</td><td>" + change[i][j].pris + "</td><td>" + change[i][j].pl + "</td><td>" + "<img src=" + change[i][j].images + ">" + "</td></tr>";
+                    document.getElementById("tb").innerHTML += hh;
+                }
+            }
+        }
+    }
+    xmlHttp.send(post_data);
+</script>
+
+</html>

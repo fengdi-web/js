@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document2-2</title>
+</head>
+
+<body>
+    <!-- <a href="BOM2-1.html#name=jack&age=18">联系我们</a> -->
+    <!-- <a href="1.html?name=jack&age=18">联系我们</a> -->
+</body>
+<script>
+    //  <div>你好</div>
+    // <button onclick="back()">返回</button>
+    //  function back(){
+    //     history.go(-1);
+    //  }
+
+
+
+    // var a = location.search;
+    //   alert(a);
+
+
+    var sea = decodeURI(location.search);
+    var del = sea.slice(1);
+
+
+    var arr = del.split("&");
+    var nam = [];
+    var nums = [];
+    for (var i in arr) {
+        var newarr = arr[i].split("=");
+        nam.push(newarr[0]);
+        nums.push(newarr[1]);
+    }
+    for (var i in nam) {
+        document.write(nam[i] + ":" + nums[i] + "<br>");
+    }
+</script>
+
+</html>

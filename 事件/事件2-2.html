@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" id="con"> -->
+
+    <!-- 当鼠标失去焦点时，判断用户名是否可用 -->
+    <!-- <p><input type="text" id="con"><span>*</span></p>
+    <p><input type="password"></p> -->
+
+    <!-- 获得焦点和失去焦点时，输入框的显示效果
+    <input type="text" id="con" value="请输入用户名"> -->
+
+
+
+    <form action="事件2-1.html" method="get" id="myform">
+        <input type="text" id="con" value="请输入用户名"><span>*</span><br>
+        <input type="reset" value="重置">
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+<script>
+    // 改变事件onchange--文本框中的内容发生改变，并且失去焦点时触发的事件
+    // document.getElementById("con").onchange=function(){
+    //     alert(this.value);
+    // }
+
+
+    // 当文本框中的内容发生改变 ，鼠标失去焦点时，判断用户名是否可用
+    // document.getElementById("con").onchange = function () {
+    //     if (this.value === "请输入用户名") {
+    //         this.nextSibling.innerHTML = "用户名已被占用";
+    //     } else {
+    //         this.nextSibling.innerHTML = "用户名可用";
+    //     }
+    // }
+
+
+    // 获得焦点和失去焦点时，输入框的显示效果
+    // document.getElementById("con").onfocus = function () {
+    //     if (this.value === "请输入用户名") {
+    //         this.value = "";
+    //     }
+    // }
+    // document.getElementById("con").onblur = function () {
+    //     if (this.value === "") {
+    //         this.value = "请输入用户名";
+    //     }
+    // }
+
+
+
+    // 重置时触发的事件
+    // document.getElementById("myform").onreset = function (){
+    //     alert("是否重置");
+    //     return false;    // 阻止提交
+    // }
+
+
+    
+    // 提交时触发的事件
+    // document.getElementById("myform").onsubmit = function () {
+    //     var s = document.getElementById("con").value.length;
+    //     alert(s);
+    //     if (s < 6) {
+    //         document.getElementById("con").nextSibling.innerHTML="用户名不能少于6位";
+    //         return false;
+    //     }
+    // }
+
+
+
+</script>
+
+</html>

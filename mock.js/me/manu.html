@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #Fcc;
+            height: 85px;
+            text-align: center;
+        }
+
+        td img {
+            width: 85px;
+            height: 85px;
+        }
+    </style>
+    <script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+    <script src="https://cdn.bootcss.com/Mock.js/1.0.1-beta3/mock-min.js"></script>
+    <script src="manu.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>菜品编号</td>
+            <td>菜品名称</td>
+            <td>菜品生产时间</td>
+            <td>菜品失效时间</td>
+            <!-- <td>折扣价</td> -->
+            <td>现在价格</td>
+            <td>评价</td>
+            <td>菜品照片</td>
+        </tr>
+    </table>
+</body>
+<script>
+    $(function () {
+
+        $.ajax({
+            url: "/manulist",
+            dataType: "text",
+            type: "post",
+            data: {
+                "username": "冯迪",
+                "userpwd": "123456",
+                "userclass": 56,
+                "type": "4",
+            },
+            success: function (data) {
+                var dat = JSON.parse(data);
+
+                for (var i in dat) {
+                    for (var j in dat[i]) {
+                        $("table").append(
+                            "<tr><td>" + dat[i][j].id + "</td><td>" + dat[i][j].name + "</td><td>" + dat[i][j].time + "</td><td>" + dat[i][j].endtime + "</td><td>" + dat[i][j].pris + "</td><td>" + dat[i][j].pl + "</td><td>" + "<img src=" + dat[i][j].images + ">" + "</td></tr>");
+                        if (i == 9) {
+                            break;
+                        }
+                    }
+                }
+            }
+        })
+    })
+</script>
+
+</html>

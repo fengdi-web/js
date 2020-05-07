@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<style>
+    #con {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #con img {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    
+    #con #zzc {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: 350px;
+        left: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+</style>
+
+<body>
+    <div id="con">
+        <img src="img/z.jpg">
+        <div id="zzc"></div>
+    </div>
+</body>
+<script>
+    var t = 350;
+
+    function up() {
+        t -= 10;
+        document.getElementById("zzc").style.top = t + "px";
+        if (t === 0) {
+            clearInterval(i);
+            t = 350;
+        }
+    }
+    document.getElementById("con").onmouseenter = function() {
+        i = setInterval("up()", 20);
+    }
+    var s = 0;
+
+    function ou() {
+        s += 10
+        document.getElementById("zzc").style.top = s + "px";
+        if (s === 350) {
+            clearInterval(i);
+            s = 0;
+        }
+    }
+    document.getElementById("con").onmouseleave = function() {
+        i = setInterval("ou()", 20);
+    }
+</script>
+
+</html>

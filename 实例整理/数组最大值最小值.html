@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var aa = new Array(13, 12, 17, 10, 20);
+    var max = aa[0];
+    var min = aa[0];
+    for(var i in aa){
+        document.write(aa[i]+",");
+    }
+    document.write("<br>");
+    function maxs(){
+        for(var j = 0; j < aa.length; j++){
+            if(max < aa[j]){
+                max = aa[j]
+            }
+        }
+        alert(max);
+    }
+    function mins(){
+        for(var j = 0; j < aa.length; j++){
+            if(min > aa[j]){
+                min = aa[j];
+            }
+        }
+        alert(min);
+    }
+</script>
+
+<body>
+    <input type="button" value="最大值" onclick="maxs()">
+    <input type="button" value="最小值" onclick="mins()">
+</body>
+
+</html>

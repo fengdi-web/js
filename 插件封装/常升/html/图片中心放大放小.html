@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="../css/fengzhuang.css">
+    <link type="text/css" rel="stylesheet" href="../css/reset.css">
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="one">
+        <img src="../img/风景1.jpg" class="sufang">
+    </div>
+    <!-- 二级菜单 -->
+    <ul class="caidan">
+		<li><a>商品</a>
+			<ul>
+				<li>手机</li>
+				<li>手机</li>
+				<li>手机</li>
+			</ul>
+		</li>
+		<li><a>商品</a>
+			<ul>
+				<li>手机</li>
+				<li>手机</li>
+				<li>手机</li>
+			</ul>
+		</li>
+		<li><a>商品</a>
+			<ul>
+				<li>手机</li>
+				<li>手机</li>
+				<li>手机</li>
+			</ul>
+		</li>
+		<li><a>商品</a>
+			<ul>
+				<li>手机</li>
+				<li>手机</li>
+				<li>手机</li>
+			</ul>
+		</li>
+    </ul>
+    	<!--tab标签页-->
+	<div id="tab">
+		<ul class="bq">
+			<li data-index="0"><a href="javascript:;">风景1</a></li>
+			<li data-index="1"><a href="javascript:;">风景2</a></li>
+			<li data-index="2"><a href="javascript:;">风景3</a></li>
+		</ul>
+		<div id="num">
+			<div class="one1"><img src="../img/风景1.jpg"></div>
+			<div class="two"><img src="../img/风景2.jpg"> </div>
+			<div class="three"><img src="../img/风景3.jpg"></div>
+		</div>
+	</div>
+</body>
+<script src="../js/fengzhuang.js"></script>
+<script>
+$(function(){
+    $.sf("sufang",200,200);
+    $(".caidan>li").erji();
+    $.tab("bq");
+})
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time"></div>
+</body>
+<script>
+    function time() {
+        var date = new Date();//创建Date对象
+        var year = date.getFullYear();//年
+        var month = date.getMonth() + 1;//月
+        var day = date.getDate();//日
+        var hours = date.getHours();//返回Date对象的时
+        var minutes = date.getMinutes();//返回Date对象的分
+        var seconds = date.getSeconds();//返回Date对象的秒
+        document.getElementById("time").innerHTML = year + "年" + month + "月" + day + "日" + " " + hours + ":" + minutes + ":" + seconds
+    }
+    setInterval("time()", 1000);
+</script>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 第一题
+    // var inp = +prompt("请输入数组的长度");
+    // if (isNaN(inp) || inp < 0) {
+    //     console.log("输入有误！")
+    // } else {
+    //     var arr = new Array(inp);        //var arr = [];    这两种写法二选一
+    //     for (var i = 0; i < inp; i++) {
+    //         arr[i] = prompt("请输入第"+(i + 1)+"位");
+
+    //     }
+    //     console.log(arr);
+    // }
+
+
+
+    // 第二题
+
+    // var arr = [1,2,3,4,5,6];
+    // var sum = 0;
+    // for(var i in arr){
+    //     sum += arr[i];
+    // }
+    // console.log(sum);
+
+
+    // 第三题
+
+    // var arr = [1,2,3,4,5,6];
+    // for(var index in arr){
+    //     if(arr[index] % 2 !== 0){
+    //        console.log(arr[index]);
+    //     }
+    // }
+
+
+
+    // 第四题
+
+    // var arr = [1, 2, 3, 4, 5, 6];
+    // for (var index in arr) {
+    //     var isFind = false;
+    //     for (var i = 2; i < arr[index] - 1; i++) {
+    //         if (arr[index] % i === 0) {
+    //             isFind = true;
+    //             break;
+    //         }
+    //     }
+    //     if (!isFind && arr[index] >= 2) {
+    //         console.log(arr[index]);
+    //     } 
+    // }
+
+
+    // 第五题
+
+    // 方法一：自己做的
+    // var inp = +prompt("请输入数列的长度");
+    // if (isNaN(inp) || inp < 0) {
+    //     console.log("输入错误！")
+    // } else {
+    //     var arr = new Array(inp);
+    //     arr[0] = 1;
+    //     arr[1] = 1;
+    //     for (var i = 2; i < inp; i++) {
+    //         arr[i] = arr[i - 1] + arr[i - 2]
+    //     }
+    //     console.log(arr);
+    // }
+
+
+
+    // 方法二
+    // var inp = +prompt("请输入数组长度");
+    // if(isNaN(inp) || inp < 0){
+    //     console.log("输入错误!")
+    // }else{
+    //     var arr = [];
+    //     for(var i = 0; i < inp; i++){
+    //         if(i === 0 || i === 1){
+    //            arr[i] = 1;
+    //         }else{
+    //             arr[i] = arr[i - 1] + arr[i - 2];
+    //         }
+    //     }
+    //     console.log(arr);
+    // }
+
+
+    // 第六题
+    // var user = [
+    //     { loginId: "abc", loginPsw: "123" },
+    //     { loginId: "abc1", loginPsw: "1234" },
+    //     { loginId: "abc2", loginPsw: "1235" },
+    //     { loginId: "abc3", loginPsw: "1236" },
+    //     { loginId: "abc4", loginPsw: "1237" },
+    // ];
+    // var loginId = prompt("请输入用户名");
+    // var loginPsw = prompt("请输入密码");
+    // var isFind = false;
+    // for (var i = 0; i < user.length; i++) {
+    //     var u = user[i];
+    //     if (u.loginId === loginId && u.loginPsw === loginPsw) {
+    //         isFind = true;
+    //         break;
+    //     }
+    // }
+    // if(isFind) {
+    //     console.log("登录成功");
+    // } else {
+    //     console.log("登录失败");
+    // }
+
+
+
+    // 第七题
+    // var arr = [
+    //     [1, 2, 3, 4, 5],
+    //     [1, 5, 3, 4, 5],
+    //     [1, 2, 3, 4, 5],
+    //     [1, 2, 3, 4, 5],
+    //     [1, 2, 3, 4, 5]
+    // ];
+
+    // var sum = 0;
+    // for (var i = 0; i < arr.length; i++) {
+    //     for (var j = 0; j < arr[i].length; j++) {
+    //         if (i === j || i + j === arr.length - 1) {
+    //             sum += arr[i][j]
+    //         }
+    //     }
+    // }
+    // console.log(sum);
+
+
+
+    // 第八题
+    // var arr = [3,1,4,2,6,3,4,7,9];
+    // for(var i = 0; i < arr.length-1; i++){
+    //     for(var j = 0; j < arr.length-1-i; j++){
+    //       if(arr[j] > arr[j + 1]){
+    //           var t = arr[j];
+    //           arr[j] = arr[j + 1];
+    //           arr[j + 1] = t;
+    //       }
+    //     }
+    // }
+    // console.log(arr);
+
+
+
+    // 第九题
+    // var arr = [1, 2, 3, 4, 2, 3, 4, 3, 4, 5, 2, 3, 4, 5, 5, 4, 3];
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- onnouseenter  不会发生事件冒泡 -->
+    <p id="con"></p>
+</body>
+<script>
+    // for (var i = 0; i < 4; i++) {
+    //     if (i === 3) {
+    //        document.write("你好");
+    //         i = 0;
+    //     } else {
+    //         document.write("hi");
+    //     }
+    // }
+
+
+
+    var sea = decodeURI(location.search);
+    var del = sea.slice(1);
+    var arr = del.split("&");
+    var nam = [];
+    var val = [];
+    for (var i = 0; i < arr.length; i++) {
+        var newarr = arr[i].split("=");
+        nam.push(newarr[0]);
+        val.push(newarr[1]);
+    }
+    for (var i in nam) {
+        var t = nam[i] + ":" + val[i] +"<br>";
+        document.getElementById("con").innerHTML+=t;
+    }
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="test('手机')">手机</button>
+    <button onclick="test('空调')">空调</button>
+    <button onclick="test('冰箱')">冰箱</button>
+    <div id="car"></div>
+</body>
+<script>
+    var sp = [];
+    var sl = [];
+
+    function test(canshu) {
+        var f = sp.indexOf(canshu);
+        if (f == -1) {
+            sp.push(canshu);
+            sl.push(1);
+        } else {
+            sl[sp.indexOf(canshu)] += 1;
+        }
+        look();
+    }
+
+    function look() {
+        document.getElementById("car").innerHTML = "";
+        for (var i in sp) {
+            var content = "<p><span>" + sp[i] + "</span><span>" + sl[i] + "</span></p>";
+            document.getElementById("car").innerHTML += content;
+        }
+    }
+</script>
+
+</html>

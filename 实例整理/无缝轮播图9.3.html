@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #show {
+            width: 300px;
+            height: 150px;
+            overflow: hidden;
+            /* overflow: scroll; */
+
+        }
+
+        #content {
+            width: 1200px;
+            height: 150px;
+        }
+
+        #content img {
+            width: 300px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="banner">
+        <div id="show">
+            <div id="content"><img src="img/1.jpg"><img src="img/2.jpg"><img src="img/3.jpg"><img src="img/4.jpg"></div>
+        </div>
+    </div>
+</body>
+<script>
+    function str() {
+        var s = document.getElementById("show")
+        s.scrollLeft += 10;
+        if (s.scrollLeft >= 300) {
+            document.getElementById("content").appendChild(document.getElementById("content").firstChild)
+            s.scrollLeft = 0;
+            clearInterval(f);
+            act();
+        }
+    }
+    function act() {
+        setTimeout(function () {
+            f = setInterval("str()", 100);
+        }, 1000)
+    }
+    act();
+
+</script>
+
+</html>

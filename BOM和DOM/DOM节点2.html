@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content1">
+        <ul>
+            <li><a href="">123445</a></li>
+            <li><a href="">152345</a></li>
+            <li><a href="">123245</a></li>
+            <li><a href="">123445</a></li>
+        </ul>
+    </div>
+    <div class="content2">
+        <span>123jhg</span>
+        <strong>cjkkjhgf</strong>
+        <i>iuygfg</i>
+        <p>kjhg</p>
+        <div class="c3">
+            <p id="test">xcvbnmkoiuy</p>
+        </div>
+    </div>
+</body>
+<script>
+    function getDiv(dom){
+      for(var parent = dom.parentElement; parent && parent.nodeName !== "DIV"; parent = parent.parentElement){}
+      return parent;
+    }
+    // var div1 = getDiv(document.querySelector(".content1").getElementsByTagName("a")[2]);
+    // var div1 = getDiv(document.querySelector(".c3"));
+    var div1 = getDiv(test);
+    console.log(div1);
+</script>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="add">添加</button>
+    <ul id="con">
+        <li>初始</li>
+        <li>初始</li>
+    </ul>
+</body>
+<script>
+    // for循环的动态添加事件---效率低，不推荐使用
+    // document.getElementById("add").onclick = function () {
+    //     var s = document.createElement("li");
+    //     s.innerHTML = "添加";
+    //     document.getElementById("con").appendChild(s);
+    //     for (var i = 0; i < son.length; i++) {
+    //         son[i].onclick = function () {
+    //             this.style.background = "#fcc";
+    //         }
+    //     }
+    // }
+    // var son = document.getElementById("con").children;
+    // for (var i = 0; i < son.length; i++) {
+    //     son[i].onclick = function () {
+    //         this.style.background = "#fcc";
+    //     }
+    // }
+
+
+
+    // 事件监听的使用---动态添加事件,这种方法比for循环执行效率高
+    // document.getElementById("add").onclick = function () {
+    //     var s = document.createElement("li");
+    //     s.innerHTML = "添加";
+    //     document.getElementById("con").appendChild(s);
+    // }
+    // document.getElementById("con").onclick=function(e){
+    //     e=window.event||e;
+    //     var node = e.target.nodeName;
+    //     if(node==="LI"){
+    //         e.target.style.background="#0f0";
+    //     }
+    // }
+
+</script>
+
+</html>

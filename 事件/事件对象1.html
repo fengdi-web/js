@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    div {
+        width: 100px;
+        height: 100px;
+        background: lightgreen;
+    }
+</style>
+
+<body>
+    <!-- 事件对象的属性 -->
+    <div id="con"></div>
+</body>
+<script>
+    // 当点击这个div是否按住了shiftKey键,返回结果为true/flase
+    // document.getElementById("con").onclick = function (e) {
+    //     e = window.event || e;
+    //     alert(e.shiftKey);
+    // }
+
+
+
+    // 当点击这个div是否按住了ctrlKey键,返回结果为true/flase
+    // document.getElementById("con").onclick = function (e) {
+    //     e = window.event || e;
+    //     alert(e.ctrlKey);
+    // }
+
+
+
+    // 当点击这个div是否按住了altKey键,返回结果为true/flase
+    // document.getElementById("con").onclick = function (e) {
+    //     e = window.event || e;
+    //     alert(e.altKey);
+    // }
+
+
+
+    // target 返回触发当前事件的对象
+    // document.getElementById("con").onclick = function (e) {
+    //     e = window.event || e;
+    //     alert(e.target);
+    // }
+
+
+    // 返回当前事件的名称
+    // document.getElementById("con").onclick = function (e){
+    //     e = window.event || e;
+    //     alert(e.type);
+    // }
+    // 弹出click
+
+    // 鼠标指针的屏幕/相对于视口/相对于对象区域的水平坐标和垂直坐标
+    document.getElementById("con").onclick = function(e) {
+        e = window.event || e;
+        var pmx = e.screenX;
+        var pmy = e.screenY;
+        var skx = e.clientX;
+        var sky = e.clientY;
+        var mex = e.offsetX;
+        var mey = e.offsetY;
+        this.innerHTML = "<div>" + pmx + "," + pmy + "<br>" + skx + "," + sky + "<br>" + mex + "," + mey + "</div>";
+    }
+</script>
+
+</html>

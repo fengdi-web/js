@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+</head>
+<style>
+    #show {
+        width: 300px;
+        height: 200px;
+        /* border: 1px solid #f00; */
+        /* overflow: scroll; */
+        overflow: hidden;
+    }
+    
+    #con {
+        width: 1200px;
+        height: 200px;
+    }
+    
+    #con img {
+        width: 300px;
+        height: 200px;
+    }
+    
+    #content {
+        width: 300px;
+        height: 200px;
+        position: relative;
+    }
+    
+    #dian {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -60px;
+    }
+    
+    #dian li {
+        width: 20px;
+        height: 20px;
+        background: lightgreen;
+        border-radius: 50%;
+        float: left;
+        margin-right: 10px;
+    }
+    
+    #dian li a {
+        display: block;
+        line-height: 20px;
+        text-align: center;
+        color: #00f;
+    }
+    
+    #dian .color {
+        background: #fff;
+    }
+</style>
+
+<body>
+    <div id="content">
+        <div id="show">
+            <div id="con"><img src="img/1.jpg"><img src="img/2.jpg"><img src="img/3.jpg"><img src="img/4.jpg"></div>
+        </div>
+        <ul id="dian">
+            <li class="color"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    function str() {
+        var s = document.getElementById("show");
+        var fa = document.getElementById("con");
+        s.scrollLeft += 10;
+        if (s.scrollLeft >= 300) {
+            fa.appendChild(fa.firstChild);
+            s.scrollLeft = 0;
+            clearInterval(f);
+            act();
+        }
+    }
+    var t = 0;
+
+    function act() {
+        setTimeout(function() {
+            f = setInterval("str()", 100);
+            var s = document.getElementsByTagName("li");
+            if (t == 3) {
+                s[t].removeAttribute("class");
+                s[0].setAttribute("class", "color");
+                t = 0;
+            } else {
+                s[t].removeAttribute("class");
+                s[t + 1].setAttribute("class", "color");
+                t++;
+            }
+        }, 1000);
+    }
+    act();
+</script>
+
+</html>

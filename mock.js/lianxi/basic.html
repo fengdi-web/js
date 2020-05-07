@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body> 
+<script src="https://cdn.bootcss.com/Mock.js/1.0.1-beta3/mock-min.js"></script>
+<script>
+    //mock 作用：生成随机数据,拦截ajax请求
+    //模拟数据基本语法
+    var data = Mock.mock({
+        "userlist|20":[
+            {
+                //basic
+                'boolean3':'@boolean(1, 9, true)', //布尔值
+                'natural':'@natural(10,60)',       //自然数
+                'integer':'@integer(60, 100)',     //整数
+                'float':'@float(60, 100, 3, 5)',   //浮点数
+                'character':'@character',          //字符 有四种  大写、小写、特殊字符、数字
+                'string':'@string',                //字符串   
+                'range':'@range(10)'               //范围    
+
+            }
+        ]
+    })
+
+    console.table(data.userlist[0]);
+</script>
+</html>

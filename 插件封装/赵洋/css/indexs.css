@@ -1,0 +1,193 @@
+body{
+	background:#000;
+}
+.star_song>li{
+	color: #000;
+	width:100px;
+	text-align: center;
+	background: #fcf;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid #0f0;
+	cursor:pointer;
+}
+.star_song{
+	width:1020px;
+	height: 50px;
+	margin: 0 auto;
+}
+.star{
+	display: none;
+}
+.star li{
+	width: 100px;
+	background:darkblue;
+	border-top: 1px solid #FFFFCC;
+	color: #FFFFCC;
+}
+.left_nav{
+	float: left;
+	clear: left;
+	margin-top: 100px;
+}
+.left_nav>li{
+	width: 100px;
+	/*height:50px;*/
+	line-height: 50px;
+	color: #f00;
+	text-align: center;
+	background: #cfc;
+	cursor:pointer;
+}
+.ss li{
+	width: 100px;
+	color: #09f;
+	background: #ffb;
+	border-bottom: 1px solid #BA55D3;
+}
+.ss{
+	display:none;
+}
+.show{
+	display: block;
+}
+.img_con img{
+	margin-right: 40px;
+	position: relative;
+	top:50px;
+	margin-bottom:100px ;
+	margin-left: 60px;
+	float: left;
+}
+
+.img_con{
+	width: 1200px;
+	height:150px;
+	position: absolute;
+	top:30px;
+	left: 100px;
+	/*background: #ffc;*/
+	overflow: hidden;
+   float: right;
+}
+.border_img{
+	width:600px;
+	height:280px;
+	overflow: hidden;
+	position: relative;
+	top:150px;
+	left: 200px;
+}
+.include_img img{
+	width:600px;
+	height: 280px;
+	float: left;
+}
+.include_img{
+	width:1200px;
+	height:280px;
+	position:absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tab{
+	float: left;
+	margin-right:20px ;
+}
+.tab_ul{
+	clear: left;
+	margin-top:200px;
+	/* border: 1px solid #FFFF00; */
+}
+.tab_ul li{
+	float: left;
+	width: 50px;
+	height: 50px;
+	background:#999;
+	color:#000;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid #F00;
+	cursor:pointer;
+}
+.tab div{
+	width: 300px;
+	height: 300px;
+	color: #000;
+	background: #999;
+	clear: left;
+	display: none;
+	line-height: 300px;
+}
+.tab .sshow{
+	display: block;
+	text-align: center;
+	font-size: 30px;
+}
+.tab .xiaohong{
+	background: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.zzc{
+	height:280px;
+	width: 400px;
+	float: left;
+	position: relative;
+	margin-top:200px;
+	overflow: hidden;
+}
+.zzc img{
+	height:280px;
+	width: 400px;
+}
+.zzc_c{
+	height: 280px;
+	width: 400px;
+	position: absolute;
+	z-index: 2;
+	opacity: 0.5;
+	background: #000;
+	top:0px
+}

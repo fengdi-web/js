@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="add()">添加</button>
+    <div id="fa">
+        <p id="two">hello world</p>
+        <div id="one">
+            <h1>你好</h1>
+        </div>
+    </div>
+</body>
+<script>
+    // 创建节点并添加到当前节点的内部的后面
+    // function add() {
+    //     var h = document.createElement("h2");
+    //     h.innerHTML = "创建的新节点";
+    //     document.getElementById("one").appendChild(h);
+    // }
+
+
+
+    // 创建节点，并将创建的节点添加到当前节点内部的参考节点的前面
+    // function add(){
+    //     var h = document.createElement("h2");
+    //     h.innerHTML="hello";
+    //     document.getElementById("one").insertBefore(h,document.getElementsByTagName("h1")[0]);
+    // }
+
+
+
+    // 移动节点到当前节点的内部的后面
+    // function add(){
+    //     var h = document.getElementById("two")
+    //     document.getElementById("one").appendChild(h);
+    // }
+
+
+
+
+    // 移动节点到当前节点内部的参考节点的前面
+    // function add(){
+    //     var h = document.getElementById("two");
+    //     document.getElementById("one").insertBefore(h,document.getElementsByTagName("h1")[0]);
+    // }
+
+
+    // 删除节点
+    // function add() {
+    //     document.getElementById("two").remove();
+    // }
+
+
+
+    // 删除当前节点的子节点node
+    // function add(){
+    //     document.getElementById("fa").removeChild(document.getElementById("two"));
+    // }
+
+
+
+    // 复制节点--深拷贝--除了复制节点，还复制所有子节点及文本节点
+    // function add(){
+    //     var h = document.getElementById("two").cloneNode(true);
+    //     document.getElementById("one").appendChild(h);
+    // }
+
+
+
+    // 复制节点--浅拷贝--只复制节点
+    // function add(){
+    //     var h = document.getElementById("two").cloneNode(false);
+    //     document.getElementById("one").appendChild(h);
+    // }
+
+
+    // 替换节点--移动原有节点来替换指定节点
+    // function add(){
+    //     document.getElementById("one").replaceChild(document.getElementById("two"),document.getElementsByTagName("h1")[0]);
+    // }
+
+
+    // 替换节点--创建新的节点来替换指定节点
+    // function add(){
+    //     var h = document.createElement("h2");
+    //     h.innerHTML="勿忘初心";
+    //     document.getElementById("one").replaceChild(h,document.getElementsByTagName("h1")[0]);
+    // }
+
+
+
+    // 判断节点是否有子节点 ---  返回结果为true/false;
+    // function add() {
+    //     var h = document.getElementById("one").hasChildNodes();
+    //     alert(h);
+    // }
+
+
+    // 判断是否包含某节点
+    // function add(){
+    //     var x = document.getElementById("one");
+    //     var p = document.getElementById("two");
+    //     var h = x.contains(p);
+    //     alert(h);
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

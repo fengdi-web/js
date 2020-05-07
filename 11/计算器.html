@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="get" name="myform">
+        <input type="text" name="one">
+        <select name="fuhao" id="fuhao">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <input type="text" name="two">
+        <button type="button" onclick="test()">=</button>
+        <input type="text" name="three">
+    </form>
+</body>
+<script>
+    function test() {
+        var one = document.myform.one.value;
+        var two = document.myform.two.value;
+        var f = document.myform.fuhao.value;
+        var s = 0;
+        switch (f) {
+            case "1":
+                s = parseFloat(one) + parseFloat(two);
+                break;
+            case "2":
+                s = parseFloat(one) - parseFloat(two);
+                break;
+            case "3":
+                s = parseFloat(one) * parseFloat(two);
+                break;
+            case "4":
+                s = parseFloat(one) / parseFloat(two);
+                break;
+        }
+        document.myform.three.value = s;
+    }
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="jl.js"></script>
+<script>
+    //节流 throttle  保证一个时间段内执行一次
+    // 方法一：计时器 1s钟之后出发
+    // var func = function(){
+    //     console.log("aaa")
+    // }
+
+    // var handel = myPlugin.jl(func,1000)
+
+    // window.onresize = function(){
+    //     handel()
+    // }
+
+    // 方法二：时间戳 先触发，后面的等到1s钟之后再触发，停止以后又触发一次
+    var func = function () {
+        console.log("aaa")
+    }
+
+    var handel = myPlugin.jl(func, 1000,false)
+
+    window.onresize = function () {
+        handel()
+    }
+</script>
+
+</html>
+
+<!-- 区别：一定要等到最后一次时间到再去执行，就用函数防抖，如果想要间隔一定时间出发一次，就使用函数节流 -->

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #con {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/z.jpg" id="con">
+</body>
+<script>
+    function sf(w,h,t,l,stop) {
+        var xx = w;
+        document.getElementById("con").onmouseover = function () {
+            var that = this;
+            var f = setInterval(function () {
+                w += 10;
+                h += 10;
+                t -= 5;
+                l -= 5;
+                that.style.width = w + "px";
+                that.style.height = h + "px";
+                that.style.top = t + "px";
+                that.style.left = l + "px";
+                if (w === stop) {
+                    clearInterval(f);
+                }
+            }, 30)
+        }
+        document.getElementById("con").onmouseout = function () {
+            var that = this;
+            var f = setInterval(function () {
+                w -= 10;
+                h -= 10;
+                t += 5;
+                l += 5;
+                that.style.width = w + "px";
+                that.style.height = h + "px";
+                that.style.top = t + "px";
+                that.style.left = l + "px";
+                if (w === xx) {
+                    clearInterval(f);
+                }
+            }, 30)
+        }
+    }
+    sf(300,300,200,200,400);
+
+</script>
+
+</html>

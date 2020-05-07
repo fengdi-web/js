@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #con {
+            width: 100px;
+            height: 100px;
+            background: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 行内绑定（不建议）,无法实现驱动和标记分离
+    <div id="con" onclick="test()"></div> -->
+
+
+
+    <!-- 动态绑定
+    <div id="con"></div> -->
+
+
+    <!-- 事件监听 -->
+    <div id="con"></div>
+
+
+
+
+</body>
+<script>
+    // 行内绑定（不建议）,无法实现驱动和标记分离
+    // function test() {
+    //     alert("你好");
+    // }
+
+    // 动态绑定-1
+    // document.getElementById("con").onclick = function() {
+    //     alert("你好");
+    // }
+
+    // 动态绑定-2
+    // function test() {
+    //     alert("你好");
+    // }
+    // document.getElementById("con").onclick = test;
+
+
+    // 事件监听（对象名.addEventListener("事件名"，函数名，捕获过程true/冒泡过程false)  
+    //事件名不带on ,捕获和冒泡可以省略
+    //说明：IE6/7/8的兼容方式是：对象名.attachEvent("on事件名"，函数)
+    document.getElementById("con").addEventListener("click", function() {
+        alert("你好")
+    })
+
+
+    // 兼容性判断
+    // var s = document.getElementById("con");
+
+    // function test() {
+    //     alert("你好");
+    // }
+    // if (window.addEventListener) {
+    //     s.addEventListener("click", test);
+    // } else {
+    //     s.attachEvent("onclick", test);
+    // }
+</script>
+
+</html>

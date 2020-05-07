@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .nav-top1 {
+            width: 100%;
+            min-width: 1348px;
+            max-width: 1920px;
+            height: 50px;
+            background: #21ad4a;
+        }
+
+        #yc {
+            display: block;
+        }
+
+        .jz {
+            width: 1340px;
+            max-width: 1788px;
+            margin: 0 auto;
+        }
+
+        .nav-top1 img {
+            margin-top: 14px;
+            float: left;
+            margin-right: 18px;
+        }
+
+        .nav-top1 span {
+            color: #fff;
+            font-size: 15px;
+            margin-top: 15px;
+            float: left;
+        }
+
+        .nav-top1 ul {
+            float: right;
+        }
+
+        .nav-top1 ul li {
+            float: left;
+            margin-top: -8px;
+        }
+
+        .nav-top1 ul a {
+            color: #ffe6ae;
+            font-size: 15px;
+        }
+
+        .nav-top1 ul a img {
+            width: 100px;
+            height: 40px;
+        }
+
+        .nav-top1 ul .one {
+            margin-top: 15px;
+            margin-right: 40px;
+        }
+
+        .one1 {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+        }
+
+        .one2 {
+            display: none;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+        }
+
+        .nav-top2 {
+            width: 100%;
+            min-width: 1348px;
+            max-width: 1920px;
+            height: 40px;
+            background: #f0eadc;
+        }
+
+        .jz2 {
+            width: 1200px;
+            max-width: 1470px;
+            margin: 0 auto;
+        }
+
+        .nav-top2 .jz2 ul i {
+            background-image: url(../img/ftrusted-web5.png);
+            display: block;
+            width: 14px;
+            height: 14px;
+            float: left;
+            margin-right: 15px;
+            margin-top: 15px;
+        }
+
+        .nav-top2 .jz2 ul span {
+            font-size: 12px;
+            color: #5fbf89;
+            float: left;
+            margin-right: 250px;
+            margin-top: 15px;
+        }
+
+        .nav-top2 .jz2 ul .no {
+            margin-right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="yc">
+        <div class="nav-top1">
+            <div class="jz">
+                <img src="../img/ftrusted-web1_01.png">
+                <span>该网站已经认证联盟认证为实名网站，请放心访问</span>
+                <ul>
+                    <li class="one"><a href="javascript:;">了解详情 ></a></li>
+                    <li><a href="javascript:;"><img src="../img/fbottom_small_img.png"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav-top2">
+            <div class="jz2">
+                <ul>
+                    <li><i></i><span>网站安全检测</span></li>
+                    <li><i></i><span>身份证明信息</span></li>
+                    <li><i></i><span>ICP备案审查</span></li>
+                    <li><i></i><span class="no">工商登记信息</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="one1" id="yc2">
+        <img src="劳士顿/img/ftrusted-web3_01.png">
+    </div>
+</body>
+<script>
+    //隐藏   
+    var ll = document.getElementById("yc");
+    var jj = document.getElementById("yc2");
+
+    jj.onclick = function () {
+        if (ll.style.display == "block") {
+            ll.style.display = "none";
+            this.children[0].src = "劳士顿/img/ftrusted-web4_01.png"
+        }
+        else {
+            ll.style.display = "block";
+            this.children[0].src = "劳士顿/img/ftrusted-web3_01.png"
+        }
+    }
+
+
+    
+    // var yc = document.getElementById("yc");
+    // document.getElementById("yc2").onclick = function () {
+    //     if (this.children[0].src == "劳士顿/img/ftrusted-web3_01.png") {
+    //         yc.style.display = "none";
+    //         this.children[0].src = "劳士顿/img/ftrusted-web4_01.png"
+    //     }
+    //     if (this.children[0].src == "劳士顿/img/ftrusted-web4_01.png") {
+    //         yc.style.display = "block";
+    //         this.children[0].src = "劳士顿/img/ftrusted-web4_01.png"
+    //     }
+    // }
+
+
+</script>
+
+</html>

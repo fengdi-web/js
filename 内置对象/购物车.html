@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="test('手机')">手机</button>
+    <button onclick="test('电脑')">电脑</button>
+    <button onclick="test('电视机')">电视机</button>
+    <button onclick="test('洗衣机')">洗衣机</button>
+    <button onclick="test('冰箱')">冰箱</button>
+    <div id="car"></div>
+</body>
+<script>
+    var shangpin = [];
+    var shuliang = [];
+    function test(canshu) {
+        var find = shangpin.indexOf(canshu);
+        if (find == -1) {
+            shangpin.push(canshu);
+            shuliang.push(1);
+        } else {
+            shuliang[find] += 1;
+        }
+        car();
+    }
+    function car() {
+        document.getElementById("car").innerHTML = "";
+        for (var i in shangpin) {
+            var content = "<p><span>" + shangpin[i] + "</span><span>" + shuliang[i] + "</span></p>";
+            document.getElementById("car").innerHTML += content;
+        }
+    }
+</script>
+
+</html>

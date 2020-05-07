@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/fd.css">
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/fd.js"></script>
+</head>
+
+<body>
+    <!-- 二级导航 -->
+    <ul id="one">
+        <li>
+            <h1>汤姆福特</h1>
+            <ul>
+                <li><a href="http://www.taobao.com">口红16</a></li>
+                <li><a href="">唇釉01</a></li>
+                <li><a href="">落樱甜情</a></li>
+                <li><a href="">深茉幽红</a></li>
+                <li><a href="">绝耀倾城</a></li>
+            </ul>
+        </li>
+        <li>
+            <h1>纪梵希</h1>
+            <ul>
+                <li><a href="">心无禁忌</a></li>
+                <li><a href="">灿若晨曦</a></li>
+                <li><a href="">306</a></li>
+                <li><a href="">小铃铛</a></li>
+                <li><a href="">禁忌之吻</a></li>
+            </ul>
+        </li>
+        <li>
+            <h1>圣罗兰</h1>
+            <ul>
+                <li><a href="">反转巴黎</a></li>
+                <li><a href="">黑色奥飘茗</a></li>
+                <li><a href="">N9</a></li>
+                <li><a href="">N8</a></li>
+                <li><a href="">N202</a></li>
+            </ul>
+        </li>
+        <li>
+            <h1>兰蔻</h1>
+            <ul>
+                <li><a href="">132</a></li>
+                <li><a href="">134</a></li>
+                <li><a href="">美丽人生</a></li>
+                <li><a href="">天鹅颈</a></li>
+                <li><a href="">奇迹绽放</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- 侧导航 -->
+    <div class="cdh">
+        <h2>数字</h2>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <h2>数字</h2>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <h2>数字</h2>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <!-- 轮播图 -->
+    <div class="show">
+        <div class="content"><img src="../img/1.jpg" alt=""><img src="../img/2.jpg" alt=""><img src="../img/3.jpg"
+                alt=""><img src="../img/4.jpg" alt=""><img src="../img/5.jpg" alt=""></div>
+    </div>
+    <!-- 图片中心缩放 -->
+    <div class="con">
+        <img src="../img/1.jpg" alt="" class="child">
+    </div>
+    <!-- tab标签页 -->
+    <div id="tab">
+        <ul>
+            <li class="color"><a href="javascript:;">中国</a></li>
+            <li><a href="javascript:;">美国</a></li>
+            <li><a href="javascript:;">新西兰</a></li>
+        </ul>
+        <div id="tabcont">
+            <div class="showt"><img src="../img/zg.png" alt=""></div>
+            <div><img src="../img/mg.png" alt=""></div>
+            <div><img src="../img/xxl.png" alt=""></div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        $("h1").ejdh(1000);      //水平导航
+        $("h2").cdh(1000);       //侧导航
+        $(".show").lbt();        //轮播图
+        // $(".content").lbt(300, 2000, 300, 5000);  //轮播图
+         // $(".content").lbt(3000);       //调用失败
+        $(".child").zx(100, 100);         //图片中心缩放
+        $("#tab").tab("color","showt");   //tab标签页
+
+    })
+
+</script>
+
+</html>

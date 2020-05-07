@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="add()">添加</button>
+    <ul id="con">
+        <li>原始</li>
+        <li>原始</li>
+    </ul>
+</body>
+<script>
+    function add() {
+        var h = document.createElement("li");
+        h.innerHTML = "添加";
+        document.getElementById("con").appendChild(h);
+    }
+    var s = document.getElementById("con");
+    s.onmouseover=function(e){
+       e = window.event||e;
+       var node = e.target.nodeName;
+       if(node === "LI"){
+           e.target.style.background="#0f0";
+       }
+    }
+    s.onmouseout=function(e){
+       e = window.event||e;
+       var node = e.target.nodeName;
+       if(node === "LI"){
+           e.target.style.background="";
+       }
+    }
+</script>
+
+</html>

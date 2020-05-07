@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function test(){
+        for(i = 0; i < 10; i++){
+            document.getElementById("content").innerHTML+=i;
+
+        }
+    }
+
+    test();
+
+
+    function test(x){
+        for( var i = 0; i < x; i++){
+            document.write(i);
+        }
+
+    }
+    test(6);
+    test(50);
+
+
+    function test(x){
+        alert(x);
+        for(var i = 0; i < x; i++){
+            document.write(i);
+        }
+    }
+    test(8);
+
+
+
+
+
+
+
+    function test(x,y){
+       for(var i = x; i < y; i++ ){
+           document.write(i);
+       }
+    }
+    test(4,9);
+
+
+
+    function test(x,y){
+        x = x || 0;
+        y = y || 0;
+
+        for(var i = x; i <= y; i++){
+            document.write(i);
+        }
+
+    }
+    test(2,6);
+
+
+
+
+
+    function test(){
+        var x = 10;
+        var y = 30;
+        var z = x + y;
+        return z;
+
+    }
+
+    var num = test();
+    alert(num);
+
+
+    // 引入一个实参
+    // function test(x){
+    //     alert(x);
+    //   for(var i = 1; i <= x; i++){
+    //     document.getElementById("content").innerHTML+=i;
+    //   }
+    // }
+    // test(10);
+    // test(20);
+
+
+
+
+
+    // 引入实参
+    // function test(x,y){
+    //     for(var i = x; i < y; i++){
+    //         document.write(i);
+    //     }
+    // }
+    // test(5,9);
+
+
+
+
+    // 当默认没有实参时，引入默认值
+    // function test(x,y){
+    //     if(x === undefined && y === undefined ){
+    //         x = 0;
+    //         y = 10;
+    //     }
+
+    //     for(var i = x; i < y; i++){
+    //         document.write(i);
+    //     }
+    // }
+    // test();
+
+
+
+    // function test(x,y){
+    //     x = x || 0;
+    //     y = y || 10;
+
+
+    //     for(var i = x; i < y; i++){
+    //         document.write(i);
+    //     }
+    // }
+    // test();
+
+
+
+    // function test(){
+    //     var x = 10;
+    //     var y = 20;
+    //     var z = x + y;
+    //     return z;
+    // }
+    // var num = test();
+    // alert(num);
+
+
+
+    // var test = function(){
+    //     alert("你好！");
+    // }
+    // test();
+
+
+
+
+        // 弹出的数字从10-1
+    // function test(x){
+    //     x++;
+    //     if(x < 10){
+    //         test(x);
+    //     }
+    //     alert(x);
+    // }
+    // test(0);
+
+
+
+
+     // function test(){
+    //     console.log(a);
+    //     var a = 3;        变量提升，打印出的是undefined
+    // }
+
+    // test();
+    // console.log(a);    在外面打印这个直接报错
+
+</script>
+
+</html>

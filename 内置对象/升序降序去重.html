@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 去重
+    // var arr = [1, 2, 1, 4, 3, 6, 7, 4];
+    // var newarr = [];
+    // for (var i in arr) {
+    //     var f = newarr.indexOf(arr[i]);
+    //     if (f == -1) {
+    //         newarr.push(arr[i]);
+    //     }
+    // }
+    // document.write(newarr);
+
+
+
+
+    // 递归
+    // var arr = [1, 2, 1, 4, 3, 6, 7, 4];
+    // for (j = 0; j < arr.length - 1; j++) {
+    //     for (var i = j + 1; i < arr.length; i++) {
+    //         if (arr[j] > arr[i]) {
+    //             var z = arr[j];
+    //             arr[j] = arr[i];
+    //             arr[i] = z;
+    //         }
+    //     }
+    // }
+
+    // document.write(arr);
+
+
+
+    //  冒泡
+    // var arr = [1, 2, 1, 4, 3, 6, 7, 4];
+    // for (var j = 0; j < arr.length - 1; j++) {
+    //     for (var i = 0; i < arr.length - 1 -j; i++) {
+    //         if (arr[i] > arr[i + 1]) { 
+    //             var z = arr[i + 1]
+    //             arr[i + 1] = arr[i];
+    //             arr[i] = z;
+    //         }
+    //     }
+    // }
+
+    // document.write(arr);
+
+
+    //  sort
+    var arr = [1, 2, 1, 4, 3, 6, 7, 4];
+    var newarr = arr.sort(function(a, b) {
+        return a - b
+    })
+    document.write(newarr);
+</script>
+
+</html>

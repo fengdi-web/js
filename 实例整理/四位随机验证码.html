@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="get" name="myform">
+        <input type="text" name="submit">
+        <span id="con"></span>
+        <a href="javascript:;" onclick="test()">看不清，换一个</a>
+        <button onclick="dengl()">按钮</button>
+    </form>
+</body>
+<script>
+    var yzm = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var num = "";
+    function test() {
+        num = "";
+        for (var i = 0; i < 4; i++) {
+            var nb = Math.floor(Math.random() * 36);
+            num += yzm[nb];
+        }
+        document.getElementById("con").innerHTML = num;
+    }
+    test();
+    function dengl() {
+        var pu = document.myform.submit.value;
+        if (pu == num) {
+            alert("登录成功");
+        } else {
+            alert("登录失败");
+        }
+    }
+</script>
+
+</html>

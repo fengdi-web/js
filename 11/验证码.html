@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" name="myform">
+        <input type="text" name="ma">
+        <span id="cc"></span>
+        <a href="javascript:;" onclick="test()">看不清，换一张</a>
+        <button onclick="lb()">登录</button>
+    </form>
+</body>
+<script>
+    var arr = [1, 2, 3, 4, 5, "a", "b", "c", "d", "e"];
+    var yzm = "";
+
+    function test() {
+        yzm = "";
+        for (var i = 0; i < 4; i++) {
+            var s = Math.floor(Math.random() * 10);
+            yzm += arr[s];
+        }
+        document.getElementById("cc").innerHTML = yzm;
+    }
+
+    function() {
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 购物车 -->
+    <!-- <button onclick="test('手机')">手机</button>
+    <button onclick="test('电脑')">电脑</button>
+    <button onclick="test('冰箱')">冰箱</button>
+    <button onclick="test('洗衣机')">洗衣机</button>
+    <button onclick="test('空调')">空调</button>
+    <div id="car"></div> -->
+
+
+    <!-- 计算器 -->
+    <!-- <form action="#" name="myform" method="get">
+        <input type="text" name="one">
+        <select name="fuhao" id="">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <input type="text" name="two">
+        <button type="button" onclick="test()">=</button>
+        <input type="text" name="three">
+    </form> -->
+
+
+    <!-- 验证码 -->
+    <!-- <form action="" method="get" name="myform">
+        <input type="text" name="one">
+        <span id="con"></span>
+        <a href="javascript:;" onclick="test()">看不清，换一张</a>
+        <button onclick="dengl()">登录</button>
+    </form> -->
+
+
+    <!-- 计时器 -->
+    <!-- <button onclick="str()">开始</button>
+    <button onclick="opn()">结束</button>
+    <div id="con">00:00:00</div> -->
+
+
+    <!-- 查询字段 -->
+
+
+
+
+
+
+
+
+</body>
+<script>
+    // 购物车
+    // var sp = [];
+    // var sl = [];
+    // function test(typ) {
+    //     var f = sp.indexOf(typ);
+    //     if (f == -1) {
+    //         sp.push(typ);
+    //         sl.push(1);
+    //     } else {
+    //         sl[f] += 1;
+    //     }
+    //     car();
+    // }
+    // function car() {
+    //     document.getElementById("car").innerHTML = "";
+    //     for (var i in sp) {
+    //         var content = "<p><span>" + sp[i] + "</span><span>" + sl[i] + "</span ></p >"
+    //         document.getElementById("car").innerHTML+=content;
+    //     }
+    // }
+
+
+    // 计算器
+    // function test(){
+    //     var a = document.myform.one.value;
+    //     var b = document.myform.two.value;
+    //     var find = document.myform.fuhao.value;
+    //     switch(find){
+    //         case"1":s = parseFloat(a)+parseFloat(b);break;
+    //         case"2":s = parseFloat(a)-parseFloat(b);break;
+    //         case"3":s = parseFloat(a)*parseFloat(b);break;
+    //         case"4":s = parseFloat(a)/parseFloat(b);break;
+    //     }
+
+    //     document.myform.three.value = s;
+    // }
+
+    // 验证码
+    // var yzm = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    // var sum
+    // function test() {
+    //     sum = "";
+    //     for (var i = 0; i < 4; i++) {
+
+    //         sum += yzm[x];
+    //     }
+    //     document.getElementById("con").innerHTML = sum;
+    // }
+    // test();
+    // function dengl() {
+    //     var t = document.myform.one.value;
+    //     if (t == sum) {
+    //         alert("输入正确");
+    //     } else {
+    //         alert("输入有误");
+    //     }
+    // }
+
+
+    // 计时器
+    // var s = 0, m = 0, h = 0;
+    // var ss = "00", mm = "00", hh = "00";
+    // var x = 0;
+    // alert(x);
+    // function test() {
+    //     s++;
+    //     if (s >= 60) {
+    //         m++;
+    //         s = 0;
+    //     }
+    //     if (m >= 60) {
+    //         h++;
+    //         m = 0;
+    //     }
+    //     s < 10 ? ss = "0" + s : ss = s;
+    //     m < 10 ? mm = "0" + m : mm = m;
+    //     h < 10 ? hh = "0" + h : hh = h;
+    //     document.getElementById("con").innerHTML = hh + ":" + mm + ":" + ss;
+    // }
+    // function str() {
+    //     if (x) {
+    //         window.clearInterval(f);
+    //     }
+    //     f = window.setInterval("test()", 1000);
+    //     x = 1;
+    // }
+    // function opn() {
+    //     window.clearInterval(f);
+    // }
+
+
+
+
+    // 查询字段
+    // var g = decodeURI(location.search);
+    // var del = g.slice(1);
+    // var arr = del.split("&");
+    // var nam=[];
+    // var vul = [];
+    // for(var i in arr){
+    //    var newarr= arr[i].split("=");
+    //    nam.push(newarr[0]);
+    //    vul.push(newarr[1]);
+    // }
+    // for(var i in nam){
+    //     document.write(nam[i]+":"+vul[i]+"<br>");
+    // }
+
+
+
+    // var  k  =  0;    
+    // for  (var  i  =  0,  v  =  0;  i  <  6,  v  <  9;  i++ ,  v++)  {        
+    //     k  =  i  +  v;    
+    // }    
+    // console.log(k);
+
+
+    // var tel = "15112341234";
+    // var reg = /^(13|15|16|17|18)[0-9]{9}$/;
+    // if (reg.test(tel)) {
+    //     alert("手机号码格式正确");
+    // } else {
+    //     alert("手机号码格式不正确");
+    // }
+
+    // //弹出 手机号码格式正确
+</script>
+
+</html>

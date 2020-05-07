@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div v-if="way=='密码登录'" class="code">
+        <div class="up" @tap="codeup">{{coded}}</div>
+        <input v-model="code" type="text" placeholder="请输入验证码">
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var login = new Vue({
+        el: '#login',
+        data: {
+            way: '快捷登录',
+            goto_txt: '登录',
+            coded: '获取验证码',
+            totalTime: 60,
+            phone: '',
+            password: '',
+            code: ''
+        },
+
+        codeup: function () {
+            if (this.coded == '获取验证码') {
+                this.coded = '发送中';
+                mui.getJSON(url + '/code', {
+                    type: 'login',
+                    phone: this.phone
+                }, function (data) {
+                    //data = JSON.stringify(data);
+                    if (data.code == 200) {
+                        if (login.totalTime == 60) {
+                            var bo_clock = window.setInterval(function () {
+                                login.totalTime--;
+                                login.coded = login.totalTime + 's';
+                                if (login.totalTime < 0) {
+                                    window.clearInterval(bo_clock);
+                                    login.coded = '获取验证码';
+                                    login.totalTime = 60;
+                                }
+                            }, 1000)
+                        }
+                    } else {
+                        login.coded = '获取验证码';
+                        mui.toast(data.msg);
+                    }
+                });
+            }
+        }
+    })
+
+</script>
+
+</html>

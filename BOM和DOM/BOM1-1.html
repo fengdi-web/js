@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* button{
+            position:fixed;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- window对象的属性(浏览器的实际宽高)
+    <p id="inner"></p> -->
+
+    <!-- <div id="inner"></div> -->
+
+    <!-- <button onclick="op()">open</button> -->
+
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorem neque harum natus ad minus aliquam necessitatibus magnam illo numquam? Blanditiis quo cum quam labore quia sed aspernatur rem est.</p> -->
+
+
+    <!-- 计时器 -->
+    <!-- <button onclick="start()">开始</button>
+    <button onclick="opn()">关闭</button>
+    <p id="con"></p> -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script>
+    // window对象的属性(浏览器的实际宽高)
+    // var iw = window.innerWidth;
+    // var ih = window.innerHeight;
+    // document.getElementById("inner").innerHTML = iw + "," + ih;
+    // alert(iw);             //提示信息
+
+
+    // var f = window.confirm("你确定要删除这条信息吗？");      //提示信息
+    // if (f) {
+    //     document.getElementById("inner").innerHTML = "确定";
+    // } else {
+    //     document.getElementById("inner").innerHTML = "取消";
+    // }
+
+
+    // function op(){
+    //     window.open("../内置对象/验证码.html","我的网页","width=100,height=50,top=300,left=100");
+    // }
+
+
+    // window对象的方法 --打印print  没有参数
+    // function op (){
+    //     window.print();
+    // }
+
+
+
+    // window对象的方法 --close 关闭
+    // function op(){
+    //     window.close();
+    // }
+
+
+    // window对象的方法 --resizeBy调整窗口的宽度和高度(仅IE支持)
+
+    // function op(){
+    //     window.resizeBy(30,30)
+    // }
+
+    // window对象的方法 --resizeTo把窗口的大小调整到指定的宽度和高度(仅IE支持)
+
+    // function op(){
+    //     window.resizeTo(300,500)
+    // }
+
+
+    // window对象的方法 --scrollBy按照指定的像素值来滚动内容
+
+    // function op(){
+    //     window.scrollBy(0,50);
+    // }
+
+
+    // window对象的方法 --scrollTo把内容滚动到指定的坐标
+
+    // function op(){
+    //     window.scrollTo(0,200);
+    // }
+
+
+    // window对象的方法 --setTimeout 在指定的毫秒数后调用函数或计算表达式
+
+    // function op(){
+    //    document.write("你好!");
+    // }
+    // window.setTimeout("op()",1000);
+
+
+    // window对象的方法 --clearTimeout 取消由setTimeout()方法设置的timeout
+
+
+    // function test(){
+    //    document.write("你好!");
+    // }
+    // var f = window.setTimeout("test()",3000);       //在指定的毫秒数后调用函数或计算表达式
+    // function op(){
+    //     window.clearTimeout(f);        //取消由setTimeout()方法设置的timeout
+    // }
+
+
+
+    // window对象的方法 --setInterval 按照指定的周期（以毫秒计）来调用函数或计算表达式
+
+    // function test(){
+    //     document.write("你好!");
+    // }
+
+    // window.setInterval("test()",1000);
+
+
+
+    // window对象的方法 --clearInterval 取消由setInterval()设置的inner
+
+    // function test(){
+    //     alert("你好!");
+    // }
+
+    // var f = window.setInterval("test()",3000);
+
+    // function op(){
+    //     window.clearInterval(f);
+    // }
+
+
+
+    // 每过1秒钟输出一个1
+    // function test(){
+    //     document.getElementById("con").innerHTML+=1;
+    // }
+
+    // window.setInterval("test()",1000);
+
+
+
+
+
+    // 每过1秒钟输出一个数，从0开始输出
+    // var i = 0;
+    // function test(){
+    //     document.getElementById("con").innerHTML=i;
+    //     i++;
+    // }
+
+    // window.setInterval("test()",1000);
+
+
+
+
+
+
+    // var i = 0;
+    // var x = 0;
+    // function test(){
+    //     document.getElementById("con").innerHTML=i;
+    //     i++;
+    // }
+    // function start(){
+    //     if(x){
+    //         clearInterval(t); 
+    //     }
+    //    t = window.setInterval("test()",1000);
+    //    x = 1;
+    // }
+    // function opn(){
+    //     window.clearInterval(t);
+    // }
+
+
+
+
+
+    // 计时器
+    // var s = 0,
+    //     m = 0,
+    //     h = 0;
+    // var ss = "00",
+    //     mm = "00",
+    //     hh = "00";
+    // var x;
+
+    // function test() {
+    //     s++;
+    //     if (s >= 60) {
+    //         m++;
+    //         s = 0;
+    //     }
+    //     if (m >= 60) {
+    //         h++;
+    //         m = 0;
+    //     }
+
+    //     s < 10 ? ss = "0" + s : ss = s;
+    //     m < 10 ? mm = "0" + m : mm = m;
+    //     h < 10 ? hh = "0" + h : hh = h;
+    //     document.getElementById("con").innerHTML = hh + ":" + mm + ":" + ss;
+    // }
+
+    // function start() {
+    //     if (x) {
+    //         window.clearInterval(f);
+    //     }
+    //     f = window.setInterval("test()", 300);
+    //     x = 1;
+    // }
+
+    // function opn() {
+    //     window.clearInterval(f);
+    // }
+</script>
+
+</html>

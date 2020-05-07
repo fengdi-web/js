@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document2-1</title>
+</head>
+
+<body>
+    <form action="BOM2-2.html" method="get" name="myform">
+        <input type="text" name="username">
+        <input type="password" name="pwd">
+        <input type="submit" value="提交">
+    </form>
+
+
+    <!-- <a href="BOM2-2.html#name=jack&age=18">联系我们</a> -->
+</body>
+<script>
+    // navigator对象 -- appCodeName返回浏览器的代码名
+    // var info = navigator.appCodeName;
+    // document.write(info);
+    // 输出   Mozilla
+
+    // navigator对象 -- appName返回浏览器的名称
+    // var info = navigator.appName;
+    // document.write(info);
+    // 输出  Netscape
+
+
+    // navigator对象 -- appVersion返回浏览器的平台和版本信息
+    // var info = navigator.appVersion;
+    // document.write(info);
+    // 输出 5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36
+
+
+    // navigator对象 --  cookieEnabled 返回指明浏览器中是否启用cookie的布尔值
+    // var info = navigator.cookieEnabled;
+    // document.write(info);
+    // 输出 true
+
+
+
+    // screen对象 -- availWidth--availHeight(返回显示屏幕的宽高，除windows任务栏之外)
+    // var aw = screen.availWidth;
+    // var ah = screen.availHeight;
+    // document.write(aw +","+ ah);
+    // 输出1366,728
+
+
+
+    // screen对象 -- width--height(返回显示屏幕的宽高)
+    // var aw = screen.width;
+    // var ah = screen.height;
+    // document.write(aw +","+ ah);
+    // 输出1366,768
+
+    // history 对象的属性length
+
+    // history 对象的方法--back(),history列表中的前一个URL
+    // history 对象的方法--forward(),history列表中的下一个URL
+    // history 对象的方法--go(),加载history列表中的某一个具体页面，-1时为后退，1时为前进
+    // <a href="BOM2-2.html">联系我们</a>
+    // <button onclick="up()">前进</button>
+    // function up(){
+    //     history.go(1);
+    // }
+
+
+
+
+    // locationdu对象的属性
+    // locationdu对象的属性---hash ---哈希值 ，设置或返回从井号（#）开始的URL
+
+
+    // var hash = location.hash;
+    // alert(hash);
+
+
+    // var hash = location.host;
+    // alert(hash);
+
+    // locationdu对象的属性---href--设置或返回当前完整的URL
+    // <a href="javascript:;" onclick="jump()">地址</a>
+    // var x = 123;
+    // function jump(){
+    //     location.href = "BOM2-2.html#"+x;
+    // }
+    // file:///C:/Users/Administrator/Desktop/%E7%AC%94%E8%AE%B0/BOM%E5%92%8CDOM/BOM2-2.html#123
+
+
+
+    // 查询字段
+    // <a href="BOM2-1.html?name=jack&age=18">联系我们</a>
+    // var sea = decodeURI(location.hash);
+    // var del = sea.slice(1);
+    // var arr = del.split("&");
+    // var nam = [];
+    // var val = [];
+    // for (var i = 0; i < arr.length; i++) {
+    //     var newarr = arr[i].split("=");
+    //     nam.push(newarr[0]);
+    //     val.push(newarr[1]);
+    // }
+    // for (var i in nam) {
+    //     document.write(nam[i] + ":" + val[i] + "<br>");
+    // }
+</script>
+
+</html>

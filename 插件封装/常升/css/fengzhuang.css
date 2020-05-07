@@ -1,0 +1,86 @@
+.one{
+    width:200px;
+    height:200px;
+    overflow:hidden;
+    position:relative;
+    /* top: 150px;
+    left: 150px; */
+}
+.sufang {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.caidan{
+    position:relative;
+    top:15px;
+}
+.caidan>li{
+    width:100px;
+    height:25px;
+    float:left;
+    border:1px solid #000;
+    background:#fcc;
+    line-height:25px;
+    
+}
+.caidan>li>ul>li{
+    width:80px;
+    height:20px;
+    border-bottom:1px solid #f00;
+    background:#0f0;
+}
+.caidan ul{
+    display:none;
+}
+/* tab标签页 */
+#tab{
+	position: absolute;
+	top:350px;
+}
+.bq{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.bq>li{
+	float: left;
+	width: 100px;
+	text-align: center;
+	height: 30px;
+	border-right: 1px solid #000;
+	background: #f00;
+    line-height: 30px;
+    color: #fff;
+}
+#num{
+	clear :left;
+	width: 300px;
+	height:200px;
+	overflow: hidden;
+}	
+.one1 img,.two img,.three img{
+	display: block;
+	height:200px;
+	width: 300px;
+}
+.one1{
+	width: 300px;
+	height:200px;
+	border: 1px solid #000;
+	display: block;
+}
+.two{
+	width: 300px;
+	height:200px;
+	border: 1px solid #000;
+	display: none;
+}
+.three{
+	width: 300px;
+	height:200px;
+	border: 1px solid #000;
+	display: none;
+}
